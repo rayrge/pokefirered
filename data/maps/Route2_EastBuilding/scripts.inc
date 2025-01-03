@@ -4,25 +4,81 @@ Route2_EastBuilding_MapScripts::
 	.byte 0
 
 Route2_EastBuilding_EventScript_Aide::
+
 	lock
 	faceplayer
 	call Route2_EastBuilding_EventScript_GetAideRequestInfo
 	goto_if_set FLAG_GOT_HM05, Route2_EastBuilding_EventScript_AlreadyGotHM05
-	msgbox Route2_EastBuilding_Text_GiveHM05IfSeen10Mons, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, Aide_EventScript_DeclineCheckMons
-	setvar VAR_0x8004, 0
-	specialvar VAR_RESULT, GetPokedexCount
-	buffernumberstring STR_VAR_3, VAR_0x8006
-	call Route2_EastBuilding_EventScript_GetAideRequestInfo
-	goto_if_lt VAR_0x8006, REQUIRED_SEEN_MONS, Aide_EventScript_HaventCaughtEnough
-	msgbox Route2_EastBuilding_Text_GreatHereYouGo
-	checkitemspace ITEM_HM05
-	goto_if_eq VAR_RESULT, FALSE, Aide_EventScript_NoRoomForItem
-	giveitem_msg Route2_EastBuilding_Text_ReceivedHM05FromAide, ITEM_HM05
+	msgbox Text_EggQuestion, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq Script_PlayerAnsweredNo
+	getpartysize
+	compare VAR_RESULT, 6
+	goto_if_eq Script_PlayerHasFullParty
+	random 3
+	copyvar VAR_0x8008, VAR_RESULT
+	call_if_eq VAR_0x8008, 0, Script_CyndaquilEgg
+	call_if_eq VAR_0x8008, 1, Script_ChikoritaEgg
+	call_if_eq VAR_0x8008, 2, Script_TotodileEgg	
+	waitfanfare
 	setflag FLAG_GOT_HM05
 	msgbox Route2_EastBuilding_Text_ExplainHM05
 	release
 	end
+
+Script_PlayerHasFullParty::
+	msgbox Text_PlayerHasFullParty, MSGBOX_DEFAULT
+	release
+	end
+
+Script_PlayerAnsweredNo::
+	msgbox Text_PlayerAnsweredNo, MSGBOX_DEFAULT
+	release
+	end
+
+Script_CyndaquilEgg::
+	giveegg SPECIES_CYNDAQUIL
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox Text_ReceivedCyndaquil, MSGBOX_DEFAULT
+	return
+
+Script_ChikoritaEgg::
+	giveegg SPECIES_CHIKORITA
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox Text_ReceivedChikorita, MSGBOX_DEFAULT
+	return
+
+Script_TotodileEgg::
+	giveegg SPECIES_TOTODILE
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox Text_ReceivedTotodile, MSGBOX_DEFAULT
+	return
+
+Text_EggQuestion:
+	.string "I was supposed to give you\n"
+	.string "Flash, but there isn't really\p"
+	.string "a point now that the\n"
+	.string "Rock Tunnel is bright.\p"
+	.string "Do you want a Johto Starter?$"
+
+Text_PlayerAnsweredNo:
+	.string "What, you don't want a free\n"
+	.string "encounter?$"
+
+Text_ReceivedCyndaquil:
+	.string "{PLAYER} received the CYNDAQUIL!$"
+
+Text_ReceivedChikorita:
+	.string "{PLAYER} received the CHIKORITA!$"
+
+Text_ReceivedTotodile:
+	.string "{PLAYER} received the TOTODILE!$"
+
+Text_PlayerHasFullParty:
+	.string "Your party is full.\n"
+	.string "There's no room for this Egg.$"
+	
+
 
 Route2_EastBuilding_EventScript_AlreadyGotHM05::
 	msgbox Route2_EastBuilding_Text_ExplainHM05

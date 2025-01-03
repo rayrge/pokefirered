@@ -3201,7 +3201,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_ANCIENT_POWER] =
     {
         .effect = EFFECT_ALL_STATS_UP_HIT,
-        .power = 60,
+        .power = 80,
         .type = TYPE_ROCK,
         .accuracy = 100,
         .pp = 5,

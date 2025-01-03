@@ -36,5 +36,7 @@ script SilphCo_1F_WarnSpikes {
 
 text SpikesWarning {
     "The Rockets have set a trap of \n"
-    "permanent spikes on the floor."
+    "permanent spikes on the floor.\p"
+	"Oh yeah, they broke the elevator \n"
+	"too. Sorry about that."
 }

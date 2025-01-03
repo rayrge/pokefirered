@@ -21,10 +21,8 @@ Route2_EastBuilding_Text_ReceivedHM05FromAide::
     .string "from the AIDE.$"
 
 Route2_EastBuilding_Text_ExplainHM05::
-    .string "HM05 contains the hidden move\n"
-    .string "FLASH.\p"
-    .string "FLASH lights up even the darkest\n"
-    .string "of caves and dungeons.$"
+    .string "You could probably hatch\n"
+    .string "this in a certain hideout.$"
 
 Route2_EastBuilding_Text_CanGetThroughRockTunnel::
     .string "Once a POKéMON learns FLASH, you\n"

@@ -58,4 +58,6 @@ SilphCo_1F_WarnSpikes::
 SpikesWarning::
 # 37 "data/maps/SilphCo_1F/scripts.pory"
 	.string "The Rockets have set a trap of \n"
-	.string "permanent spikes on the floor.$"
+	.string "permanent spikes on the floor.\p"
+	.string "Oh yeah, they broke the elevator \n"
+	.string "too. Sorry about that.$"
