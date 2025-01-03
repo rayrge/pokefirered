@@ -33,25 +33,23 @@ SilphCo_1F_EventScript_FloorSign::
 
 SilphCo_1F_StartSpikes::
 # 20 "data/maps/SilphCo_1F/scripts.pory"
-	msgbox SpikesWarning, MSGBOX_SIGN
-# 21 "data/maps/SilphCo_1F/scripts.pory"
 	setvar VAR_SILPHFIGHT, 1
 	end
 
 
 SilphCo_1F_WarnSpikes::
-# 26 "data/maps/SilphCo_1F/scripts.pory"
+# 25 "data/maps/SilphCo_1F/scripts.pory"
 	lockall
-# 27 "data/maps/SilphCo_1F/scripts.pory"
+# 26 "data/maps/SilphCo_1F/scripts.pory"
 	msgbox SpikesWarning, MSGBOX_SIGN
-# 28 "data/maps/SilphCo_1F/scripts.pory"
+# 27 "data/maps/SilphCo_1F/scripts.pory"
 	setvar VAR_SILPHWARN, 1
-# 29 "data/maps/SilphCo_1F/scripts.pory"
+# 28 "data/maps/SilphCo_1F/scripts.pory"
 	releaseall
 	end
 
 
 SpikesWarning::
-# 33 "data/maps/SilphCo_1F/scripts.pory"
+# 32 "data/maps/SilphCo_1F/scripts.pory"
 	.string "The Rockets have set a trap of \n"
 	.string "permanent spikes on the floor.$"
