@@ -8,8 +8,8 @@
 #define AI_CHOICE_FLEE 4
 #define AI_CHOICE_WATCH 5
 
-void BattleAI_HandleItemUseBeforeAISetup(void);
-void BattleAI_SetupAIData(void);
+void BattleAI_HandleItemUseBeforeAISetup();
+void BattleAI_SetupAIData();
 u8 BattleAI_ChooseMoveOrAction(void);
 void ClearBankMoveHistory(u8 bank);
 void RecordAbilityBattle(u8 bank, u8 abilityId);

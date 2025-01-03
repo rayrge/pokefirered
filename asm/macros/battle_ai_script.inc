@@ -553,6 +553,11 @@
 	.4byte \ptr
 	.endm
 
+	.macro if_target_is_ally param0:req
+	.byte 0x5e
+	.4byte \param0
+	.endm
+
 @ useful script macros
 	.macro get_curr_move_type
 	get_type AI_TYPE_MOVE

@@ -258,8 +258,8 @@
 #define VAR_0x40CD                 0x40CD
 #define VAR_0x40CE                 0x40CE
 #define VAR_FRONTIER_FACILITY      0x40CF
-#define VAR_0x40D0                 0x40D0
-#define VAR_0x40D1                 0x40D1
+#define VAR_SILPHFIGHT             0x40D0
+#define VAR_SILPHWARN              0x40D1
 #define VAR_0x40D2                 0x40D2
 #define VAR_0x40D3                 0x40D3
 #define VAR_0x40D4                 0x40D4
@@ -342,5 +342,6 @@
 #define NPC_TEXT_COLOR_MON       2 // Black, for Pokémon
 #define NPC_TEXT_COLOR_NEUTRAL   3 // Black, for inanimate objects and messages from the game
 #define NPC_TEXT_COLOR_DEFAULT 255 // If an NPC is selected, use the color specified by GetColorFromTextColorTable, otherwise use Neutral.
+
 
 #endif // GUARD_CONSTANTS_VARS_H

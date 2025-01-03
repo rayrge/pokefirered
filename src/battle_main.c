@@ -2242,6 +2242,12 @@ static void BattleStartClearSetData(void)
             dataPtr[j] = 0;
     }
 
+    // auto spikes for silph
+    if (VarGet(VAR_SILPHFIGHT) == 1) {
+        gSideStatuses[0] |= SIDE_STATUS_SPIKES;
+        gSideTimers[0].spikesAmount++;
+    }
+
     gBattlerAttacker = 0;
     gBattlerTarget = 0;
     gBattleWeather = 0;

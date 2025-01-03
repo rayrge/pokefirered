@@ -26,6 +26,7 @@
 #include "battle.h"
 #include "battle_transition.h"
 #include "battle_controllers.h"
+#include "battle_anim.h"
 #include "constants/battle_setup.h"
 #include "constants/items.h"
 #include "constants/maps.h"
@@ -211,8 +212,8 @@ static void Task_BattleStart(u8 taskId)
 
 static void CreateBattleStartTask(u8 transition, u16 song) // song == 0 means default music for current map
 {
+    
     u8 taskId = CreateTask(Task_BattleStart, 1);
-
     gTasks[taskId].tTransition = transition;
     PlayMapChosenOrBattleBGM(song);
 }
@@ -292,9 +293,13 @@ static void DoGhostBattle(void)
 
 static void DoTrainerBattle(void)
 {
+    
     CreateBattleStartTask(GetTrainerBattleTransition(), 0);
+   
+
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_TRAINER_BATTLES);
+    gBattleWeather = B_WEATHER_SUN_TEMPORARY;
 }
 
 void StartOldManTutorialBattle(void)
@@ -894,6 +899,8 @@ void ClearTrainerFlag(u16 trainerId)
 
 void StartTrainerBattle(void)
 {
+
+
     gBattleTypeFlags = BATTLE_TYPE_TRAINER;
     if (GetTrainerBattleMode() == TRAINER_BATTLE_EARLY_RIVAL && GetRivalBattleFlags() & RIVAL_BATTLE_TUTORIAL)
         gBattleTypeFlags |= BATTLE_TYPE_FIRST_BATTLE;
