@@ -10868,13 +10868,13 @@ static const struct TrainerMonItemCustomMoves sParty_DevBudget[] = {
         .lvl = 50,
         .species = SPECIES_SANDSLASH,
         .heldItem = ITEM_NONE,
-        .moves = {MOVE_FIRE_BLAST, MOVE_DOUBLE_EDGE},
+        .moves = {MOVE_FLAMETHROWER, MOVE_DOUBLE_EDGE},
     },
     {
         .iv = 255,
         .lvl = 50,
         .species = SPECIES_CELEBI,
         .heldItem = ITEM_NONE,
-        .moves = {MOVE_SLUDGE_BOMB},
+        .moves = {MOVE_SLUDGE_BOMB, MOVE_RAZOR_LEAF},
     },
 };
