@@ -14,16 +14,16 @@ SilphCo_Elevator_EventScript_FloorSelect::
 	special ListMenu
 	waitstate
 	switch VAR_RESULT
-	case 0, SilphCo_Elevator_EventScript_To11F
-	case 1, SilphCo_Elevator_EventScript_To10F
-	case 2, SilphCo_Elevator_EventScript_To9F
-	case 3, SilphCo_Elevator_EventScript_To8F
-	case 4, SilphCo_Elevator_EventScript_To7F
-	case 5, SilphCo_Elevator_EventScript_To6F
-	case 6, SilphCo_Elevator_EventScript_To5F
-	case 7, SilphCo_Elevator_EventScript_To4F
-	case 8, SilphCo_Elevator_EventScript_To3F
-	case 9, SilphCo_Elevator_EventScript_To2F
+	case 0, SilphCo_Elevator_EventScript_To1F
+	case 1, SilphCo_Elevator_EventScript_To1F
+	case 2, SilphCo_Elevator_EventScript_To1F
+	case 3, SilphCo_Elevator_EventScript_To1F
+	case 4, SilphCo_Elevator_EventScript_To1F
+	case 5, SilphCo_Elevator_EventScript_To1F
+	case 6, SilphCo_Elevator_EventScript_To1F
+	case 7, SilphCo_Elevator_EventScript_To1F
+	case 8, SilphCo_Elevator_EventScript_To1F
+	case 9, SilphCo_Elevator_EventScript_To1F
 	case 10, SilphCo_Elevator_EventScript_To1F
 	case 11, SilphCo_Elevator_EventScript_ExitFloorSelect
 	case 127, SilphCo_Elevator_EventScript_ExitFloorSelect

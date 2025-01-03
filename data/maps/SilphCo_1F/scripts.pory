@@ -21,6 +21,11 @@ script SilphCo_1F_StartSpikes {
     end
 }
 
+script SilphCo_1F_EndSpikes {
+	setvar(VAR_SILPHFIGHT, 0)
+    end
+}
+
 script SilphCo_1F_WarnSpikes {
     lockall
     msgbox(SpikesWarning, MSGBOX_SIGN)
