@@ -2430,6 +2430,10 @@ void SwitchInClearSetData(void)
 
     gBattleResources->flags->flags[gActiveBattler] = 0;
     gCurrentMove = MOVE_NONE;
+
+    // CORRECTLY CLEAR BATTLE HIST
+    ClearBattlerMoveHistory(gActiveBattler);
+    ClearBattlerAbilityHistory(gActiveBattler);
 }
 
 void FaintClearSetData(void)
@@ -2516,6 +2520,10 @@ void FaintClearSetData(void)
     gBattleResources->flags->flags[gActiveBattler] = 0;
     gBattleMons[gActiveBattler].type1 = gSpeciesInfo[gBattleMons[gActiveBattler].species].types[0];
     gBattleMons[gActiveBattler].type2 = gSpeciesInfo[gBattleMons[gActiveBattler].species].types[1];
+
+    // CORRECTLY CLEAR BATTLE HIST
+    ClearBattlerMoveHistory(gActiveBattler);
+    ClearBattlerAbilityHistory(gActiveBattler);
 }
 
 static void BattleIntroGetMonsData(void)

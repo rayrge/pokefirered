@@ -15,6 +15,9 @@ void ClearBankMoveHistory(u8 bank);
 void RecordAbilityBattle(u8 bank, u8 abilityId);
 void ClearBankAbilityHistory(u8 bank);
 void RecordItemEffectBattle(u8 bank, u8 itemEffect);
+void ClearBattlerMoveHistory(u8 battlerId);
+void ClearBattlerAbilityHistory(u8 battlerId);
+
 void ClearBankItemEffectHistory(u8 bank);
 u8 BattleAI_ChooseMoveOrAction(void);
 

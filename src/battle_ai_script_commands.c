@@ -614,13 +614,19 @@ static void RecordLastUsedMoveByTarget(void)
     }
 }
 
-// not used
-static void ClearBattlerMoveHistory(u8 battlerId)
+// not used, mistake
+void ClearBattlerMoveHistory(u8 battlerId)
 {
     s32 i;
 
     for (i = 0; i < 8; i++)
         BATTLE_HISTORY->usedMoves[battlerId / 2][i] = MOVE_NONE;
+}
+
+// not implemented
+void ClearBattlerAbilityHistory(u8 battlerId)
+{
+    BATTLE_HISTORY->abilities[battlerId] = ABILITY_NONE;
 }
 
 void RecordAbilityBattle(u8 battlerId, u8 abilityId)
