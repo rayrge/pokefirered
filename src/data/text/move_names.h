@@ -377,4 +377,5 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_HP_ICE] = _("HP ICE"),
     [MOVE_HP_DRAGON] = _("HP DRAGON"),
     [MOVE_HP_DARK] = _("HP DARK"),
+    [MOVE_ICE_SHARD] = _("ICE SHARD"),
 };
