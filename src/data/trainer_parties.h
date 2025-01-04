@@ -283,29 +283,44 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherRick[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherDoug[] = {
+static const struct TrainerMonItemCustomMoves sParty_BugCatcherDoug[] = {
     {
-        .iv = 0,
-        .lvl = 7,
-        .species = SPECIES_WEEDLE,
+        .iv = 255,
+        .lvl = 10,
+        .species = SPECIES_PARAS,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_XSCISSORS, MOVE_ROCK_TOMB, MOVE_GIGA_DRAIN, MOVE_TOXIC},
     },
     {
-        .iv = 0,
-        .lvl = 7,
-        .species = SPECIES_KAKUNA,
+        .iv = 255,
+        .lvl = 16,
+        .species = SPECIES_WEEDLE,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_SLUDGE},
     },
     {
-        .iv = 0,
-        .lvl = 7,
-        .species = SPECIES_WEEDLE,
+        .iv = 255,
+        .lvl = 16,
+        .species = SPECIES_CATERPIE,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_TWINEEDLE}
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherSammy[] = {
+static const struct TrainerMonItemCustomMoves sParty_BugCatcherSammy[] = {
     {
-        .iv = 0,
-        .lvl = 9,
-        .species = SPECIES_WEEDLE,
+        .iv = 255,
+        .lvl = 11,
+        .species = SPECIES_PINSIR,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_KARATE_CHOP, MOVE_PIN_MISSILE, MOVE_QUICK_ATTACK},
+    },
+    {
+        .iv = 255,
+        .lvl = 11,
+        .species = SPECIES_YANMA,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_GUST, MOVE_PIN_MISSILE},
     },
 };
 
@@ -7387,21 +7402,20 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherAnthony[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherCharlie[] = {
+static const struct TrainerMonItemCustomMoves sParty_BugCatcherCharlie[] = {
     {
-        .iv = 0,
-        .lvl = 7,
-        .species = SPECIES_METAPOD,
+        .iv = 255,
+        .lvl = 14,
+        .species = SPECIES_CLEFFA,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_METRONOME},
     },
     {
-        .iv = 0,
-        .lvl = 7,
-        .species = SPECIES_CATERPIE,
-    },
-    {
-        .iv = 0,
-        .lvl = 7,
-        .species = SPECIES_METAPOD,
+        .iv = 255,
+        .lvl = 14,
+        .species = SPECIES_TOGEPI,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_METRONOME},
     },
 };
 
