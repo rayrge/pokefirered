@@ -2195,7 +2195,7 @@ static const u16 sMeganiumLevelUpLearnset[] = {
 static const u16 sCyndaquilLevelUpLearnset[] = {
     LEVEL_UP_MOVE(1, MOVE_TACKLE),
     LEVEL_UP_MOVE(1, MOVE_LEER),
-    LEVEL_UP_MOVE(6, MOVE_SMOKESCREEN),
+    LEVEL_UP_MOVE(6, MOVE_XSCISSORS),
     LEVEL_UP_MOVE(12, MOVE_EMBER),
     LEVEL_UP_MOVE(19, MOVE_QUICK_ATTACK),
     LEVEL_UP_MOVE(27, MOVE_FLAME_WHEEL),

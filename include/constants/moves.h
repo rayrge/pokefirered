@@ -362,7 +362,8 @@
 #define MOVE_SHADOW_SNEAK 358
 #define MOVE_DRACO_METEOR 359
 #define MOVE_NIGHT_SLASH 360
-#define MOVES_COUNT 361
+#define MOVE_XSCISSORS 361
+#define MOVES_COUNT 362
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

@@ -360,4 +360,5 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_SHADOW_SNEAK]  = _("SHADOW SNEAK"),
     [MOVE_DRACO_METEOR]  = _("DRACO METEOR"),
     [MOVE_NIGHT_SLASH]   = _("NIGHT SLASH"),
+    [MOVE_XSCISSORS]     = _("X-SCISSORS"),
 };

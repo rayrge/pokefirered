@@ -381,6 +381,7 @@ gBattleAnims_Moves::
 	.4byte Move_SHADOW_SNEAK
 	.4byte Move_DRACO_METEOR
 	.4byte Move_NIGHT_SLASH
+	.4byte Move_XSCISSORS
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -1488,6 +1489,15 @@ FireSpinEffect:
 	createsprite gFireSpinSpriteTemplate, ANIM_TARGET, 2, 0, 33, 464, 30, 15, -50, ANIM_TARGET
 	delay 2
 	return
+
+Move_XSCISSORS:
+	loadspritegfx ANIM_TAG_CUT
+	monbg ANIM_TARGET
+	setalpha 12, 8
+	playsewithpan SE_M_RAZOR_WIND, SOUND_PAN_TARGET
+	createvisualtask AnimTask_IsFuryCutterHitRight, 2
+	jumpretfalse FuryCutterLeft
+	goto FuryCutterRight
 
 Move_FURY_CUTTER:
 	loadspritegfx ANIM_TAG_CUT

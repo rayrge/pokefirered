@@ -253,6 +253,7 @@ const u8 gMoveDescription_GunkShot[] = _("Sludge Bomb\nbut better.");
 const u8 gMoveDescription_ShadowSneak[] = _("No Dusclops\nin this game!");
 const u8 gMoveDescription_DracoMeteor[] = _("Pain Simulator");
 const u8 gMoveDescription_NightSlash[] = _("What walls Doom?");
+const u8 gMoveDescription_XScissors[] = _("It's SCISSOR,\nnot SCISSORS!");
 const u8 gMoveDescription_ShadowBall[] = _("A shadowy blob is\nhurled at the foe.\nMay also lower the\nfoe's SP. DEF.");
 const u8 gMoveDescription_FutureSight[] = _("Two turns after\nthis move is used,\nthe foe is attacked\npsychically.");
 const u8 gMoveDescription_RockSmash[] = _("An attack that may\nalso cut DEFENSE.\nIt can also smash\ncracked boulders.");
@@ -723,4 +724,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_SHADOW_SNEAK  - 1] = gMoveDescription_ShadowSneak,
     [MOVE_DRACO_METEOR  - 1] = gMoveDescription_DracoMeteor,
     [MOVE_NIGHT_SLASH   - 1] = gMoveDescription_NightSlash,
+    [MOVE_XSCISSORS     - 1] = gMoveDescription_XScissors,
 };
