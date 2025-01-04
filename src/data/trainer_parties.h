@@ -5606,20 +5606,44 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderBrock[] = {
         .iv = 255,
         .lvl = 16,
         .species = SPECIES_ONIX,
+        .heldItem = ITEM_ORAN_BERRY,
         .moves = {MOVE_DIG, MOVE_ROCK_TOMB, MOVE_SWAGGER, MOVE_SELF_DESTRUCT},
     },
     {
         .iv = 255,
         .lvl = 16,
         .species = SPECIES_KABUTO,
+        .heldItem = ITEM_ORAN_BERRY,
         .moves = {MOVE_AERIAL_ACE, MOVE_ROCK_TOMB, MOVE_GIGA_DRAIN, MOVE_BUBBLE_BEAM},
     },
     {
         .iv = 255,
-        .lvl = 14,
+        .lvl = 16,
         .species = SPECIES_CORSOLA,
-        .moves = {MOVE_WATER_GUN, MOVE_ROCK_THROW, MOVE_MIRROR_COAT, MOVE_NONE}
-    }
+        .heldItem = ITEM_ORAN_BERRY,
+        .moves = {MOVE_WATER_GUN, MOVE_ROCK_TOMB, MOVE_MIRROR_COAT, MOVE_AURORA_BEAM}
+    },
+    {
+        .iv = 255,
+        .lvl = 16,
+        .species = SPECIES_MAGCARGO,
+        .heldItem = ITEM_ORAN_BERRY,
+        .moves = {MOVE_FLAME_WHEEL, MOVE_ROCK_TOMB, MOVE_HP_GRASS, MOVE_RECOVER}
+    },
+    {
+        .iv = 255,
+        .lvl = 16,
+        .species = SPECIES_SUDOWOODO,
+        .heldItem = ITEM_ORAN_BERRY,
+        .moves = {MOVE_CALM_MIND, MOVE_ROCK_TOMB, MOVE_ICE_PUNCH, MOVE_THUNDER_PUNCH}
+    },
+    {
+        .iv = 255,
+        .lvl = 16,
+        .species = SPECIES_SHUCKLE,
+        .heldItem = ITEM_ORAN_BERRY,
+        .moves = {MOVE_TOXIC, MOVE_ROCK_THROW, MOVE_SANDSTORM, MOVE_CURSE}
+    },
 };
 
 static const struct TrainerMonNoItemCustomMoves sParty_LeaderMisty[] = {

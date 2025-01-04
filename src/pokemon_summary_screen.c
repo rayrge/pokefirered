@@ -140,6 +140,8 @@ static void PokeSum_UpdateMonMarkingsAnim(void);
 static s8 SeekToNextMonInSingleParty(s8 direction);
 static s8 SeekToNextMonInMultiParty(s8 direction);
 
+
+
 struct PokemonSummaryScreenData
 {
     u16 bg1TilemapBuffer[0x800];
