@@ -356,4 +356,6 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_PSYCHO_BOOST]  = _("PSYCHO BOOST"),
     [MOVE_HEAD_SMASH]    = _("HEAD SMASH"),
     [MOVE_AQUA_JET]      = _("AQUA JET"),
+    [MOVE_GUNK_SHOT]     = _("GUNK SHOT"),
+    [MOVE_SHADOW_SNEAK]  = _("SHADOW SNEAK"),
 };

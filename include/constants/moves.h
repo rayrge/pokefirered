@@ -358,8 +358,9 @@
 #define MOVE_PSYCHO_BOOST 354
 #define MOVE_HEAD_SMASH 355
 #define MOVE_AQUA_JET 356
-
-#define MOVES_COUNT 357
+#define MOVE_GUNK_SHOT 357
+#define MOVE_SHADOW_SNEAK 358
+#define MOVES_COUNT 359
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF
