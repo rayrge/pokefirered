@@ -5601,19 +5601,25 @@ static const struct TrainerMonItemCustomMoves sParty_EliteFourLance[] = {
     },
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock[] = {
+static const struct TrainerMonItemCustomMoves sParty_LeaderBrock[] = {
     {
-        .iv = 0,
-        .lvl = 12,
-        .species = SPECIES_GEODUDE,
-        .moves = {MOVE_TACKLE, MOVE_DEFENSE_CURL, MOVE_NONE, MOVE_NONE},
-    },
-    {
-        .iv = 0,
-        .lvl = 14,
+        .iv = 255,
+        .lvl = 16,
         .species = SPECIES_ONIX,
-        .moves = {MOVE_TACKLE, MOVE_BIND, MOVE_ROCK_TOMB, MOVE_NONE},
+        .moves = {MOVE_DIG, MOVE_ROCK_TOMB, MOVE_SWAGGER, MOVE_SELF_DESTRUCT},
     },
+    {
+        .iv = 255,
+        .lvl = 16,
+        .species = SPECIES_KABUTO,
+        .moves = {MOVE_AERIAL_ACE, MOVE_ROCK_TOMB, MOVE_GIGA_DRAIN, MOVE_BUBBLE_BEAM},
+    },
+    {
+        .iv = 255,
+        .lvl = 14,
+        .species = SPECIES_CORSOLA,
+        .moves = {MOVE_WATER_GUN, MOVE_ROCK_THROW, MOVE_MIRROR_COAT, MOVE_NONE}
+    }
 };
 
 static const struct TrainerMonNoItemCustomMoves sParty_LeaderMisty[] = {

@@ -1782,14 +1782,10 @@ static bool8 Fishing6(struct Task *task)
     task->tStep++;
     bite = FALSE;
 
-    if (!DoesCurrentMapHaveFishingMons() || Random() & 1)
-    {
-        task->tStep = FISHING_NO_BITE;
-    }
-    else
-    {
-        StartSpriteAnim(&gSprites[gPlayerAvatar.spriteId], GetFishingBiteDirectionAnimNum(GetPlayerFacingDirection()));
-    }
+
+    
+    StartSpriteAnim(&gSprites[gPlayerAvatar.spriteId], GetFishingBiteDirectionAnimNum(GetPlayerFacingDirection()));
+    
     return TRUE;
 }
 
