@@ -363,7 +363,23 @@
 #define MOVE_DRACO_METEOR 359
 #define MOVE_NIGHT_SLASH 360
 #define MOVE_XSCISSORS 361
-#define MOVES_COUNT 362
+#define MOVE_HP_FIGHTING 362
+#define MOVE_HP_FLYING 363
+#define MOVE_HP_POISON 364
+#define MOVE_HP_GROUND 365
+#define MOVE_HP_ROCK 366
+#define MOVE_HP_BUG 367
+#define MOVE_HP_GHOST 368
+#define MOVE_HP_STEEL 369
+#define MOVE_HP_FIRE 370
+#define MOVE_HP_WATER 371
+#define MOVE_HP_GRASS 372
+#define MOVE_HP_ELECTRIC 373
+#define MOVE_HP_PSYCHIC 374
+#define MOVE_HP_ICE 375
+#define MOVE_HP_DRAGON 376
+#define MOVE_HP_DARK 377
+#define MOVES_COUNT 378
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF
