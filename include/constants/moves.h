@@ -360,7 +360,9 @@
 #define MOVE_AQUA_JET 356
 #define MOVE_GUNK_SHOT 357
 #define MOVE_SHADOW_SNEAK 358
-#define MOVES_COUNT 359
+#define MOVE_DRACO_METEOR 359
+#define MOVE_NIGHT_SLASH 360
+#define MOVES_COUNT 361
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

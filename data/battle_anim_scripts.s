@@ -379,6 +379,8 @@ gBattleAnims_Moves::
 	.4byte Move_AQUA_JET
 	.4byte Move_GUNK_SHOT
 	.4byte Move_SHADOW_SNEAK
+	.4byte Move_DRACO_METEOR
+	.4byte Move_NIGHT_SLASH
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -2315,6 +2317,27 @@ Move_THIEF:
 	waitbgfadein
 	end
 
+Move_NIGHT_SLASH:
+	loadspritegfx ANIM_TAG_SLASH
+	monbg ANIM_TARGET
+	delay 1
+	fadetobg BG_DARK
+	waitbgfadein
+	setalpha 12, 8
+	createsprite gSlashSliceSpriteTemplate, ANIM_TARGET, 2, 1, -8, 0
+	playsewithpan SE_M_RAZOR_WIND, SOUND_PAN_TARGET
+	delay 4
+	createsprite gSlashSliceSpriteTemplate, ANIM_TARGET, 2, 1, 8, 0
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 4, 0, 18, 1
+	playsewithpan SE_M_RAZOR_WIND, SOUND_PAN_TARGET
+	waitforvisualfinish
+	delay 20
+	clearmonbg ANIM_TARGET
+	blendoff
+	restorebg
+	waitbgfadein
+	end
+
 Move_BUBBLE_BEAM:
 	loadspritegfx ANIM_TAG_BUBBLE
 	loadspritegfx ANIM_TAG_SMALL_BUBBLES
@@ -3969,6 +3992,32 @@ Move_ENDEAVOR:
 	end
 
 Move_ERUPTION:
+	loadspritegfx ANIM_TAG_WARM_ROCK
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG | F_PAL_BATTLERS, 2, 0, 4, RGB_RED
+	waitforvisualfinish
+	createvisualtask AnimTask_EruptionLaunchRocks, 2
+	waitplaysewithpan SE_M_EXPLOSION, SOUND_PAN_ATTACKER, 60
+	waitforvisualfinish
+	createvisualtask AnimTask_EruptionLaunchRocks, 2
+	waitplaysewithpan SE_M_EXPLOSION, SOUND_PAN_ATTACKER, 60
+	waitforvisualfinish
+	delay 30
+	createsprite gEruptionFallingRockSpriteTemplate, ANIM_ATTACKER, 40, 200, -32, 0, 100, 0
+	createsprite gEruptionFallingRockSpriteTemplate, ANIM_ATTACKER, 40, 30, -32, 16, 90, 1
+	createsprite gEruptionFallingRockSpriteTemplate, ANIM_ATTACKER, 40, 150, -32, 32, 60, 2
+	createsprite gEruptionFallingRockSpriteTemplate, ANIM_ATTACKER, 40, 90, -32, 48, 80, 3
+	createsprite gEruptionFallingRockSpriteTemplate, ANIM_ATTACKER, 40, 110, -32, 64, 50, 0
+	createsprite gEruptionFallingRockSpriteTemplate, ANIM_ATTACKER, 40, 60, -32, 80, 70, 1
+	delay 22
+	createvisualtask AnimTask_HorizontalShake, 5, (MAX_BATTLERS_COUNT + 1), 8, 60
+	createvisualtask AnimTask_HorizontalShake, 5, MAX_BATTLERS_COUNT, 8, 60
+	loopsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET, 16, 12
+	delay 80
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 40, F_PAL_BG | F_PAL_BATTLERS, 4, 4, 0, RGB_RED
+	end
+
+
+Move_DRACO_METEOR:
 	loadspritegfx ANIM_TAG_WARM_ROCK
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG | F_PAL_BATTLERS, 2, 0, 4, RGB_RED
 	waitforvisualfinish
