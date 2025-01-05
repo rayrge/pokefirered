@@ -26,11 +26,13 @@ script Route4_EventScript_Falkner {
 }
 
 text Falkner_Intro{
-    "Test Message"
+    "I've been searching for a legendary\n"
+    "pilot who ruled the lands.\p"
+    "Have you heard of the legend?"
 }
 
 text Falkner_Outro{
-    "Test Message"
+    "Not here!"
 }
 
 text Falkner_PostBattle{
