@@ -10,7 +10,7 @@
 #include "strings.h"
 #include "field_fadetransition.h"
 #include "gba/m4a_internal.h"
-#include <strings.h>
+#include <string.h>
 
 // can't include the one in menu_helpers.h since Task_OptionMenu needs bool32 for matching
 bool32 IsActiveOverworldLinkBusy(void);
