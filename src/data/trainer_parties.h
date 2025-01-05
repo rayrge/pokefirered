@@ -293,14 +293,14 @@ static const struct TrainerMonItemCustomMoves sParty_BugCatcherDoug[] = {
     },
     {
         .iv = 255,
-        .lvl = 16,
+        .lvl = 12,
         .species = SPECIES_WEEDLE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_SLUDGE},
     },
     {
         .iv = 255,
-        .lvl = 16,
+        .lvl = 12,
         .species = SPECIES_CATERPIE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_TWINEEDLE}
