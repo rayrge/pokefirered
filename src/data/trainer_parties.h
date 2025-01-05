@@ -378,16 +378,41 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherJames[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherKent[] = {
+static const struct TrainerMonItemCustomMoves sParty_BirdKeeperFalkner[] = {
     {
-        .iv = 0,
-        .lvl = 11,
-        .species = SPECIES_WEEDLE,
+        .iv = 255,
+        .lvl = 21,
+        .species = SPECIES_NOCTOWL,
+        .heldItem = ITEM_TWISTED_SPOON,
+        .moves = {MOVE_AERIAL_ACE, MOVE_HYPNOSIS, MOVE_PSYBEAM, MOVE_NIGHT_SHADE},
     },
     {
-        .iv = 0,
-        .lvl = 11,
-        .species = SPECIES_KAKUNA,
+        .iv = 255,
+        .lvl = 21,
+        .species = SPECIES_MURKROW,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_AERIAL_ACE, MOVE_FAINT_ATTACK, MOVE_NIGHT_SHADE, MOVE_NONE},
+    },
+    {
+        .iv = 255,
+        .lvl = 21,
+        .species = SPECIES_SKIPLOOM,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_AERIAL_ACE, MOVE_GIGA_DRAIN, MOVE_LEECH_SEED, MOVE_STUN_SPORE}
+    },
+    {
+        .iv = 255,
+        .lvl = 21,
+        .species = SPECIES_NATU,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_FLY, MOVE_PSYBEAM, MOVE_GIGA_DRAIN, MOVE_NIGHT_SHADE}
+    },
+    {
+        .iv = 255,
+        .lvl = 21,
+        .species = SPECIES_DELIBIRD,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_WING_ATTACK, MOVE_AURORA_BEAM, MOVE_KARATE_CHOP, MOVE_ICY_WIND}
     },
 };
 
