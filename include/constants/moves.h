@@ -380,7 +380,9 @@
 #define MOVE_HP_DRAGON 376
 #define MOVE_HP_DARK 377
 #define MOVE_ICE_SHARD 378
-#define MOVES_COUNT 379
+#define MOVE_EARTH_POWER 379
+#define MOVE_DRILL_RUN 380
+#define MOVES_COUNT 381
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF
