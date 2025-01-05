@@ -406,6 +406,7 @@ gBattleAnims_Moves::
 	.4byte Move_AIR_SLASH
 	.4byte Move_FLASH_CANNON
 	.4Byte Move_ICE_SHARD
+	.4Byte
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -11275,3 +11276,24 @@ Move_FLASH_CANNON:
 
 Move_ICE_SHARD:
 	goto Move_ICICLE_SPEAR
+
+Move_NIGHT_SLASH:
+	loadspritegfx ANIM_TAG_SLASH
+	monbg ANIM_TARGET
+	delay 1
+	fadetobg BG_DARK
+	waitbgfadein
+	setalpha 12, 8
+	createsprite gSlashSliceSpriteTemplate, ANIM_TARGET, 2, 1, -8, 0
+	playsewithpan SE_M_RAZOR_WIND, SOUND_PAN_TARGET
+	delay 4
+	createsprite gSlashSliceSpriteTemplate, ANIM_TARGET, 2, 1, 8, 0
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 4, 0, 18, 1
+	playsewithpan SE_M_RAZOR_WIND, SOUND_PAN_TARGET
+	waitforvisualfinish
+	delay 20
+	clearmonbg ANIM_TARGET
+	blendoff
+	restorebg
+	waitbgfadein
+	end
