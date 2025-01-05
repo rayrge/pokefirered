@@ -375,35 +375,37 @@ gBattleAnims_Moves::
 	.4byte Move_WATER_PULSE
 	.4byte Move_DOOM_DESIRE
 	.4byte Move_PSYCHO_BOOST
-	.4byte Move_HEAD_SMASH
-	.4byte Move_AQUA_JET
-	.4byte Move_GUNK_SHOT
-	.4byte Move_SHADOW_SNEAK
-	.4byte Move_DRACO_METEOR
-	.4byte Move_NIGHT_SLASH
-	.4byte Move_XSCISSORS
-
-	.4byte Move_HP_FIGHTING
-	.4byte Move_HP_FLYING
-	.4byte Move_HP_POISON
-	.4byte Move_HP_GROUND
-	.4byte Move_HP_ROCK
-	.4byte Move_HP_BUG
-	.4byte Move_HP_GHOST
-	.4byte Move_HP_STEEL
-	.4byte Move_HP_FIRE
-	.4byte Move_HP_WATER
-	.4byte Move_HP_GRASS
-	.4byte Move_HP_ELECTRIC
-	.4byte Move_HP_PSYCHIC
-	.4byte Move_HP_ICE
-	.4byte Move_HP_DRAGON
-	.4byte Move_HP_DARK
-
-	.4byte Move_ICE_SHARD
-	.4byte Move_EARTH_POWER	
+	.4byte Move_WEATHER_BALL_WATER
+	.4byte Move_WEATHER_BALL_FIRE
 	.4byte Move_DRILL_RUN
-	
+	.4byte Move_HIDDEN_POWER_NORMAL
+	.4byte Move_HIDDEN_POWER_FIRE
+	.4byte Move_HIDDEN_POWER_WATER
+	.4byte Move_HIDDEN_POWER_ELECTRIC
+	.4byte Move_HIDDEN_POWER_GRASS
+	.4byte Move_HIDDEN_POWER_ICE
+	.4byte Move_HIDDEN_POWER_FIGHTING
+	.4byte Move_HIDDEN_POWER_POISON
+	.4byte Move_HIDDEN_POWER_GROUND
+	.4byte Move_HIDDEN_POWER_FLYING
+	.4byte Move_HIDDEN_POWER_PSYCHIC
+	.4byte Move_HIDDEN_POWER_BUG
+	.4byte Move_HIDDEN_POWER_ROCK
+	.4byte Move_HIDDEN_POWER_GHOST
+	.4byte Move_HIDDEN_POWER_DRAGON
+	.4byte Move_HIDDEN_POWER_DARK
+	.4byte Move_HIDDEN_POWER_STEEL
+	.4byte Move_EARTH_POWER
+	.4byte Move_HEAD_SMASH
+	.4byte Move_GUNK_SHOT
+	.4byte Move_WILD_CHARGE
+	.4byte Move_X_SCISSORS
+	.4byte Move_DRACO_METEOR
+	.4byte Move_FORCE_PALM
+	.4byte Move_SHADOW_SNEAK
+	.4byte Move_AIR_SLASH
+	.4byte Move_FLASH_CANNON
+	.4Byte Move_ICE_SHARD
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -800,35 +802,6 @@ Move_ICICLE_SPEAR:
 	blendoff
 	end
 
-Move_ICE_SHARD:
-	loadspritegfx ANIM_TAG_ICICLE_SPEAR
-	loadspritegfx ANIM_TAG_IMPACT
-	monbg ANIM_TARGET
-	splitbgprio ANIM_TARGET
-	setalpha 12, 8
-	playsewithpan SE_M_ICY_WIND, SOUND_PAN_ATTACKER
-	createsprite gIcicleSpearSpriteTemplate, ANIM_ATTACKER, 2, 20, -8, -8, -8, 20, -32
-	delay 15
-	createsprite gIcicleSpearSpriteTemplate, ANIM_ATTACKER, 2, 20, -8, 8, 8, 20, -40
-	delay 4
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
-	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 3, -8, -8, ANIM_TARGET, 2
-	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 3, 0, 2, 1
-	delay 9
-	createsprite gIcicleSpearSpriteTemplate, ANIM_ATTACKER, 2, 20, -8, 0, 0, 20, -32
-	delay 4
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
-	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 3, 8, 8, ANIM_TARGET, 2
-	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 3, 0, 2, 1
-	delay 14
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
-	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, ANIM_TARGET, 2
-	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 3, 0, 2, 1
-	waitforvisualfinish
-	clearmonbg ANIM_TARGET
-	blendoff
-	end
-
 Move_TAKE_DOWN:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
@@ -854,39 +827,6 @@ Move_TAKE_DOWN:
 	end
 
 Move_DOUBLE_EDGE:
-	loadspritegfx ANIM_TAG_IMPACT
-	playsewithpan SE_M_SWIFT, SOUND_PAN_ATTACKER
-	createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_ATTACKER, 4, 2, RGB_WHITE, 10, RGB_BLACK, 0
-	waitforvisualfinish
-	delay 10
-	playsewithpan SE_M_SWAGGER, SOUND_PAN_ATTACKER
-	waitplaysewithpan SE_M_SWAGGER, SOUND_PAN_ATTACKER, 8
-	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_ATTACKER, 18, 6, 2, 4
-	waitforvisualfinish
-	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG, 0, 16, 16, RGB_WHITE
-	createsprite gSlideMonToOffsetSpriteTemplate, ANIM_ATTACKER, 2, 0, 20, 0, 0, 4
-	delay 3
-	waitforvisualfinish
-	playsewithpan SE_M_MEGA_KICK2, SOUND_PAN_TARGET
-	createsprite gBasicHitSplatSpriteTemplate, ANIM_TARGET, 4, -10, 0, ANIM_TARGET, 0
-	createsprite gSlideMonToOffsetSpriteTemplate, ANIM_ATTACKER, 2, 1, -32, 0, 0, 3
-	waitforvisualfinish
-	createvisualtask AnimTask_RotateMonSpriteToSide, 2, 8, -256, ANIM_ATTACKER, 0
-	createvisualtask AnimTask_RotateMonSpriteToSide, 2, 8, -256, ANIM_TARGET, 0
-	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_ATTACKER, 4, 0, 12, 1
-	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_TARGET, 4, 0, 12, 1
-	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG, 2, 16, 0, RGB_WHITE
-	waitforvisualfinish
-	createvisualtask AnimTask_RotateMonSpriteToSide, 2, 8, -256, ANIM_ATTACKER, 1
-	createvisualtask AnimTask_RotateMonSpriteToSide, 2, 8, -256, ANIM_TARGET, 1
-	waitforvisualfinish
-	createsprite gSlideMonToOriginalPosSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 5
-	delay 3
-	createsprite gSlideMonToOriginalPosSpriteTemplate, ANIM_ATTACKER, 2, 1, 0, 7
-	waitforvisualfinish
-	end
-	
-Move_HEAD_SMASH:
 	loadspritegfx ANIM_TAG_IMPACT
 	playsewithpan SE_M_SWIFT, SOUND_PAN_ATTACKER
 	createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_ATTACKER, 4, 2, RGB_WHITE, 10, RGB_BLACK, 0
@@ -1362,490 +1302,6 @@ Move_HIDDEN_POWER:
 	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 224
 	end
 
-
-Move_HP_BUG:
-	loadspritegfx ANIM_TAG_RED_ORB
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	waitforvisualfinish
-	delay 30
-	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_ATTACKER, RGB(31, 31, 19), 12, 5, 1
-	delay 4
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	playsewithpan SE_M_REVERSAL, SOUND_PAN_ATTACKER
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 0
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 42
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 84
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 126
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 168
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 210
-	delay 52
-	setarg 7, 0xFFFF
-	playsewithpan SE_M_REFLECT, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 32
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 64
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 96
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 128
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 160
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 192
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 224
-	end
-
-
-Move_HP_DARK:
-	loadspritegfx ANIM_TAG_RED_ORB
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	waitforvisualfinish
-	delay 30
-	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_ATTACKER, RGB(31, 31, 19), 12, 5, 1
-	delay 4
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	playsewithpan SE_M_REVERSAL, SOUND_PAN_ATTACKER
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 0
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 42
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 84
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 126
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 168
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 210
-	delay 52
-	setarg 7, 0xFFFF
-	playsewithpan SE_M_REFLECT, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 32
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 64
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 96
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 128
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 160
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 192
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 224
-	end
-
-
-Move_HP_DRAGON:
-	loadspritegfx ANIM_TAG_RED_ORB
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	waitforvisualfinish
-	delay 30
-	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_ATTACKER, RGB(31, 31, 19), 12, 5, 1
-	delay 4
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	playsewithpan SE_M_REVERSAL, SOUND_PAN_ATTACKER
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 0
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 42
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 84
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 126
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 168
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 210
-	delay 52
-	setarg 7, 0xFFFF
-	playsewithpan SE_M_REFLECT, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 32
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 64
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 96
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 128
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 160
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 192
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 224
-	end
-
-
-Move_HP_ELECTRIC:
-	loadspritegfx ANIM_TAG_RED_ORB
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	waitforvisualfinish
-	delay 30
-	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_ATTACKER, RGB(31, 31, 19), 12, 5, 1
-	delay 4
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	playsewithpan SE_M_REVERSAL, SOUND_PAN_ATTACKER
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 0
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 42
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 84
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 126
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 168
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 210
-	delay 52
-	setarg 7, 0xFFFF
-	playsewithpan SE_M_REFLECT, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 32
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 64
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 96
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 128
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 160
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 192
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 224
-	end
-
-Move_HP_FIGHTING:
-	loadspritegfx ANIM_TAG_RED_ORB
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	waitforvisualfinish
-	delay 30
-	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_ATTACKER, RGB(31, 31, 19), 12, 5, 1
-	delay 4
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	playsewithpan SE_M_REVERSAL, SOUND_PAN_ATTACKER
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 0
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 42
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 84
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 126
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 168
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 210
-	delay 52
-	setarg 7, 0xFFFF
-	playsewithpan SE_M_REFLECT, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 32
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 64
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 96
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 128
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 160
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 192
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 224
-	end
-
-Move_HP_FIRE:
-	loadspritegfx ANIM_TAG_RED_ORB
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	waitforvisualfinish
-	delay 30
-	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_ATTACKER, RGB(31, 31, 19), 12, 5, 1
-	delay 4
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	playsewithpan SE_M_REVERSAL, SOUND_PAN_ATTACKER
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 0
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 42
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 84
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 126
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 168
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 210
-	delay 52
-	setarg 7, 0xFFFF
-	playsewithpan SE_M_REFLECT, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 32
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 64
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 96
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 128
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 160
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 192
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 224
-	end
-
-Move_HP_FLYING:
-	loadspritegfx ANIM_TAG_RED_ORB
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	waitforvisualfinish
-	delay 30
-	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_ATTACKER, RGB(31, 31, 19), 12, 5, 1
-	delay 4
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	playsewithpan SE_M_REVERSAL, SOUND_PAN_ATTACKER
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 0
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 42
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 84
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 126
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 168
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 210
-	delay 52
-	setarg 7, 0xFFFF
-	playsewithpan SE_M_REFLECT, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 32
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 64
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 96
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 128
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 160
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 192
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 224
-	end
-
-Move_HP_GHOST:
-	loadspritegfx ANIM_TAG_RED_ORB
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	waitforvisualfinish
-	delay 30
-	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_ATTACKER, RGB(31, 31, 19), 12, 5, 1
-	delay 4
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	playsewithpan SE_M_REVERSAL, SOUND_PAN_ATTACKER
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 0
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 42
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 84
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 126
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 168
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 210
-	delay 52
-	setarg 7, 0xFFFF
-	playsewithpan SE_M_REFLECT, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 32
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 64
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 96
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 128
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 160
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 192
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 224
-	end
-
-Move_HP_GRASS:
-	loadspritegfx ANIM_TAG_RED_ORB
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	waitforvisualfinish
-	delay 30
-	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_ATTACKER, RGB(31, 31, 19), 12, 5, 1
-	delay 4
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	playsewithpan SE_M_REVERSAL, SOUND_PAN_ATTACKER
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 0
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 42
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 84
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 126
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 168
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 210
-	delay 52
-	setarg 7, 0xFFFF
-	playsewithpan SE_M_REFLECT, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 32
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 64
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 96
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 128
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 160
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 192
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 224
-	end
-
-Move_HP_GROUND:
-	loadspritegfx ANIM_TAG_RED_ORB
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	waitforvisualfinish
-	delay 30
-	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_ATTACKER, RGB(31, 31, 19), 12, 5, 1
-	delay 4
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	playsewithpan SE_M_REVERSAL, SOUND_PAN_ATTACKER
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 0
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 42
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 84
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 126
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 168
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 210
-	delay 52
-	setarg 7, 0xFFFF
-	playsewithpan SE_M_REFLECT, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 32
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 64
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 96
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 128
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 160
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 192
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 224
-	end
-
-Move_HP_ICE:
-	loadspritegfx ANIM_TAG_RED_ORB
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	waitforvisualfinish
-	delay 30
-	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_ATTACKER, RGB(31, 31, 19), 12, 5, 1
-	delay 4
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	playsewithpan SE_M_REVERSAL, SOUND_PAN_ATTACKER
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 0
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 42
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 84
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 126
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 168
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 210
-	delay 52
-	setarg 7, 0xFFFF
-	playsewithpan SE_M_REFLECT, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 32
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 64
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 96
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 128
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 160
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 192
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 224
-	end
-
-Move_HP_POISON:
-	loadspritegfx ANIM_TAG_RED_ORB
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	waitforvisualfinish
-	delay 30
-	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_ATTACKER, RGB(31, 31, 19), 12, 5, 1
-	delay 4
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	playsewithpan SE_M_REVERSAL, SOUND_PAN_ATTACKER
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 0
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 42
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 84
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 126
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 168
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 210
-	delay 52
-	setarg 7, 0xFFFF
-	playsewithpan SE_M_REFLECT, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 32
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 64
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 96
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 128
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 160
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 192
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 224
-	end
-
-Move_HP_PSYCHIC:
-	loadspritegfx ANIM_TAG_RED_ORB
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	waitforvisualfinish
-	delay 30
-	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_ATTACKER, RGB(31, 31, 19), 12, 5, 1
-	delay 4
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	playsewithpan SE_M_REVERSAL, SOUND_PAN_ATTACKER
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 0
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 42
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 84
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 126
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 168
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 210
-	delay 52
-	setarg 7, 0xFFFF
-	playsewithpan SE_M_REFLECT, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 32
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 64
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 96
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 128
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 160
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 192
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 224
-	end
-
-Move_HP_ROCK:
-	loadspritegfx ANIM_TAG_RED_ORB
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	waitforvisualfinish
-	delay 30
-	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_ATTACKER, RGB(31, 31, 19), 12, 5, 1
-	delay 4
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	playsewithpan SE_M_REVERSAL, SOUND_PAN_ATTACKER
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 0
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 42
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 84
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 126
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 168
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 210
-	delay 52
-	setarg 7, 0xFFFF
-	playsewithpan SE_M_REFLECT, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 32
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 64
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 96
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 128
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 160
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 192
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 224
-	end
-
-Move_HP_STEEL:
-	loadspritegfx ANIM_TAG_RED_ORB
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	waitforvisualfinish
-	delay 30
-	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_ATTACKER, RGB(31, 31, 19), 12, 5, 1
-	delay 4
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	playsewithpan SE_M_REVERSAL, SOUND_PAN_ATTACKER
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 0
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 42
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 84
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 126
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 168
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 210
-	delay 52
-	setarg 7, 0xFFFF
-	playsewithpan SE_M_REFLECT, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 32
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 64
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 96
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 128
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 160
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 192
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 224
-	end
-
-Move_HP_WATER:
-	loadspritegfx ANIM_TAG_RED_ORB
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	waitforvisualfinish
-	delay 30
-	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_ATTACKER, RGB(31, 31, 19), 12, 5, 1
-	delay 4
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	playsewithpan SE_M_REVERSAL, SOUND_PAN_ATTACKER
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 0
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 42
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 84
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 126
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 168
-	createsprite gHiddenPowerOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 210
-	delay 52
-	setarg 7, 0xFFFF
-	playsewithpan SE_M_REFLECT, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 0
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 32
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 64
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 96
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 128
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 160
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 192
-	createsprite gHiddenPowerOrbScatterSpriteTemplate, ANIM_TARGET, 2, 224
-	end
-
 Move_REVERSAL:
 	loadspritegfx ANIM_TAG_BLUE_ORB
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET
@@ -2025,15 +1481,6 @@ FireSpinEffect:
 	delay 2
 	return
 
-Move_XSCISSORS:
-	loadspritegfx ANIM_TAG_CUT
-	monbg ANIM_TARGET
-	setalpha 12, 8
-	playsewithpan SE_M_RAZOR_WIND, SOUND_PAN_TARGET
-	createvisualtask AnimTask_IsFuryCutterHitRight, 2
-	jumpretfalse FuryCutterLeft
-	goto FuryCutterRight
-
 Move_FURY_CUTTER:
 	loadspritegfx ANIM_TAG_CUT
 	monbg ANIM_TARGET
@@ -2205,48 +1652,6 @@ Move_WATERFALL:
 	clearmonbg ANIM_DEF_PARTNER
 	blendoff
 	end
-	
-Move_AQUA_JET:
-	loadspritegfx ANIM_TAG_WATER_IMPACT
-	loadspritegfx ANIM_TAG_SMALL_BUBBLES
-	loadspritegfx ANIM_TAG_ICE_CRYSTALS
-	monbg ANIM_DEF_PARTNER
-	setalpha 12, 8
-	createvisualtask AnimTask_ShakeMon, 5, ANIM_ATTACKER, 0, 2, 23, 1
-	delay 5
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_ATTACKER
-	createsprite gSmallBubblePairSpriteTemplate, ANIM_ATTACKER, 2, 10, 10, 25, ANIM_ATTACKER
-	delay 4
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_ATTACKER
-	createsprite gSmallBubblePairSpriteTemplate, ANIM_ATTACKER, 2, -15, 0, 25, ANIM_ATTACKER
-	delay 4
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_ATTACKER
-	createsprite gSmallBubblePairSpriteTemplate, ANIM_ATTACKER, 2, 20, 10, 25, ANIM_ATTACKER
-	delay 4
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_ATTACKER
-	createsprite gSmallBubblePairSpriteTemplate, ANIM_ATTACKER, 2, 0, -10, 25, ANIM_ATTACKER
-	delay 4
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_ATTACKER
-	createsprite gSmallBubblePairSpriteTemplate, ANIM_ATTACKER, 2, -10, 15, 25, ANIM_ATTACKER
-	delay 4
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_ATTACKER
-	createsprite gSmallBubblePairSpriteTemplate, ANIM_ATTACKER, 2, 25, 20, 25, ANIM_ATTACKER
-	delay 4
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_ATTACKER
-	createsprite gSmallBubblePairSpriteTemplate, ANIM_ATTACKER, 2, -20, 20, 25, ANIM_ATTACKER
-	delay 4
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_ATTACKER
-	createsprite gSmallBubblePairSpriteTemplate, ANIM_ATTACKER, 2, 12, 0, 25, ANIM_ATTACKER
-	waitforvisualfinish
-	delay 10
-	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 6, 5
-	delay 6
-	call RisingWaterHitEffect
-	waitforvisualfinish
-	clearmonbg ANIM_DEF_PARTNER
-	blendoff
-	end
-
 
 RisingWaterHitEffect:
 	playsewithpan SE_M_WATERFALL, SOUND_PAN_TARGET
@@ -2862,27 +2267,6 @@ Move_THIEF:
 	waitbgfadein
 	end
 
-Move_NIGHT_SLASH:
-	loadspritegfx ANIM_TAG_SLASH
-	monbg ANIM_TARGET
-	delay 1
-	fadetobg BG_DARK
-	waitbgfadein
-	setalpha 12, 8
-	createsprite gSlashSliceSpriteTemplate, ANIM_TARGET, 2, 1, -8, 0
-	playsewithpan SE_M_RAZOR_WIND, SOUND_PAN_TARGET
-	delay 4
-	createsprite gSlashSliceSpriteTemplate, ANIM_TARGET, 2, 1, 8, 0
-	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 4, 0, 18, 1
-	playsewithpan SE_M_RAZOR_WIND, SOUND_PAN_TARGET
-	waitforvisualfinish
-	delay 20
-	clearmonbg ANIM_TARGET
-	blendoff
-	restorebg
-	waitbgfadein
-	end
-
 Move_BUBBLE_BEAM:
 	loadspritegfx ANIM_TAG_BUBBLE
 	loadspritegfx ANIM_TAG_SMALL_BUBBLES
@@ -3161,14 +2545,6 @@ FuryAttackLeft:
 	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
 	goto FuryAttackContinue
 
-Move_DRILL_RUN:
-	loadspritegfx ANIM_TAG_IMPACT
-	loadspritegfx ANIM_TAG_HORN_HIT
-	jumpifcontest HornDrillInContest
-	fadetobg BG_DRILL
-	waitbgfadeout
-	createvisualtask AnimTask_StartSlidingBg, 5, -2304, 768, 1, -1
-
 Move_HORN_DRILL:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_HORN_HIT
@@ -3314,33 +2690,6 @@ Move_EARTHQUAKE:
 	end
 
 Move_FISSURE:
-	loadspritegfx ANIM_TAG_MUD_SAND
-	createvisualtask AnimTask_HorizontalShake, 3, (MAX_BATTLERS_COUNT + 1), 10, 50
-	createvisualtask AnimTask_HorizontalShake, 3, ANIM_TARGET, 10, 50
-	playsewithpan SE_M_EARTHQUAKE, SOUND_PAN_TARGET
-	delay 8
-	call FissureDirtPlumeFar
-	delay 15
-	createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG, 3, 1, RGB_BLACK, 14, RGB_WHITE, 14
-	delay 15
-	call FissureDirtPlumeClose
-	delay 15
-	createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG, 3, 1, RGB_BLACK, 14, RGB_WHITE, 14
-	delay 15
-	call FissureDirtPlumeFar
-	delay 50
-	fadetobg BG_FISSURE
-	waitbgfadeout
-	createvisualtask AnimTask_PositionFissureBgOnBattler, 5, ANIM_TARGET, 5, -1
-	waitbgfadein
-	delay 40
-	restorebg
-	waitbgfadeout
-	setarg 7, -1
-	waitbgfadein
-	end
-
-Move_EARTH_POWER:
 	loadspritegfx ANIM_TAG_MUD_SAND
 	createvisualtask AnimTask_HorizontalShake, 3, (MAX_BATTLERS_COUNT + 1), 10, 50
 	createvisualtask AnimTask_HorizontalShake, 3, ANIM_TARGET, 10, 50
@@ -3920,26 +3269,6 @@ Move_FORESIGHT:
 	end
 
 Move_DESTINY_BOND:
-	loadspritegfx ANIM_TAG_WHITE_SHADOW
-	fadetobg BG_GHOST
-	playsewithpan SE_M_PSYBEAM, SOUND_PAN_ATTACKER
-	waitbgfadein
-	createvisualtask AnimTask_DestinyBondWhiteShadow, 5, 0, 48
-	playsewithpan SE_M_CONFUSE_RAY, SOUND_PAN_ATTACKER
-	delay 48
-	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_ATTACKER, 2, 0, 24, 1
-	createvisualtask AnimTask_BlendBattleAnimPalExclude, 2, 6, 1, 0, 12, RGB(29, 29, 29)
-	delay 24
-	createvisualtask AnimTask_BlendBattleAnimPalExclude, 2, 6, 1, 12, 0, RGB(29, 29, 29)
-	playsewithpan SE_M_NIGHTMARE, SOUND_PAN_TARGET
-	waitforvisualfinish
-	restorebg
-	waitbgfadein
-	blendoff
-	clearmonbg 5
-	end
-
-Move_SHADOW_SNEAK:
 	loadspritegfx ANIM_TAG_WHITE_SHADOW
 	fadetobg BG_GHOST
 	playsewithpan SE_M_PSYBEAM, SOUND_PAN_ATTACKER
@@ -4572,32 +3901,6 @@ Move_ENDEAVOR:
 	end
 
 Move_ERUPTION:
-	loadspritegfx ANIM_TAG_WARM_ROCK
-	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG | F_PAL_BATTLERS, 2, 0, 4, RGB_RED
-	waitforvisualfinish
-	createvisualtask AnimTask_EruptionLaunchRocks, 2
-	waitplaysewithpan SE_M_EXPLOSION, SOUND_PAN_ATTACKER, 60
-	waitforvisualfinish
-	createvisualtask AnimTask_EruptionLaunchRocks, 2
-	waitplaysewithpan SE_M_EXPLOSION, SOUND_PAN_ATTACKER, 60
-	waitforvisualfinish
-	delay 30
-	createsprite gEruptionFallingRockSpriteTemplate, ANIM_ATTACKER, 40, 200, -32, 0, 100, 0
-	createsprite gEruptionFallingRockSpriteTemplate, ANIM_ATTACKER, 40, 30, -32, 16, 90, 1
-	createsprite gEruptionFallingRockSpriteTemplate, ANIM_ATTACKER, 40, 150, -32, 32, 60, 2
-	createsprite gEruptionFallingRockSpriteTemplate, ANIM_ATTACKER, 40, 90, -32, 48, 80, 3
-	createsprite gEruptionFallingRockSpriteTemplate, ANIM_ATTACKER, 40, 110, -32, 64, 50, 0
-	createsprite gEruptionFallingRockSpriteTemplate, ANIM_ATTACKER, 40, 60, -32, 80, 70, 1
-	delay 22
-	createvisualtask AnimTask_HorizontalShake, 5, (MAX_BATTLERS_COUNT + 1), 8, 60
-	createvisualtask AnimTask_HorizontalShake, 5, MAX_BATTLERS_COUNT, 8, 60
-	loopsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET, 16, 12
-	delay 80
-	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 40, F_PAL_BG | F_PAL_BATTLERS, 4, 4, 0, RGB_RED
-	end
-
-
-Move_DRACO_METEOR:
 	loadspritegfx ANIM_TAG_WARM_ROCK
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG | F_PAL_BATTLERS, 2, 0, 4, RGB_RED
 	waitforvisualfinish
@@ -6791,45 +6094,6 @@ Move_SLUDGE:
 	end
 
 Move_SLUDGE_BOMB:
-	loadspritegfx ANIM_TAG_POISON_BUBBLE
-	call SludgeBombProjectile
-	call SludgeBombProjectile
-	call SludgeBombProjectile
-	call SludgeBombProjectile
-	call SludgeBombProjectile
-	call SludgeBombProjectile
-	call SludgeBombProjectile
-	call SludgeBombProjectile
-	call SludgeBombProjectile
-	call SludgeBombProjectile
-	createvisualtask AnimTask_ShakeMon2, 5, ANIM_TARGET, 3, 0, 15, 1
-	createvisualtask AnimTask_BlendColorCycle, 2, F_PAL_TARGET, 1, 2, 0, 12, RGB(30, 0, 31)
-	createsprite gSludgeBombHitParticleSpriteTemplate, ANIM_TARGET, 2, 42, 27, 20
-	createsprite gSludgeBombHitParticleSpriteTemplate, ANIM_TARGET, 2, -27, 44, 20
-	createsprite gSludgeBombHitParticleSpriteTemplate, ANIM_TARGET, 2, 39, -28, 20
-	createsprite gSludgeBombHitParticleSpriteTemplate, ANIM_TARGET, 2, -42, -42, 20
-	playsewithpan SE_M_DIG, SOUND_PAN_TARGET
-	delay 5
-	createsprite gSludgeBombHitParticleSpriteTemplate, ANIM_TARGET, 2, 0, 40, 20
-	createsprite gSludgeBombHitParticleSpriteTemplate, ANIM_TARGET, 2, -8, -44, 20
-	createsprite gSludgeBombHitParticleSpriteTemplate, ANIM_TARGET, 2, -46, -28, 20
-	createsprite gSludgeBombHitParticleSpriteTemplate, ANIM_TARGET, 2, 46, 9, 20
-	playsewithpan SE_M_DIG, SOUND_PAN_TARGET
-	delay 5
-	createsprite gSludgeBombHitParticleSpriteTemplate, ANIM_TARGET, 2, 42, 0, 20
-	createsprite gSludgeBombHitParticleSpriteTemplate, ANIM_TARGET, 2, -43, -12, 20
-	createsprite gSludgeBombHitParticleSpriteTemplate, ANIM_TARGET, 2, 16, -46, 20
-	createsprite gSludgeBombHitParticleSpriteTemplate, ANIM_TARGET, 2, -16, 44, 20
-	playsewithpan SE_M_DIG, SOUND_PAN_TARGET
-	delay 0
-	waitsound
-	waitforvisualfinish
-	call PoisonBubblesEffect
-	waitforvisualfinish
-	end
-
-
-Move_GUNK_SHOT:
 	loadspritegfx ANIM_TAG_POISON_BUBBLE
 	call SludgeBombProjectile
 	call SludgeBombProjectile
@@ -11892,6 +11156,7 @@ Move_WEATHER_BALL_WATER:
 	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 0, 3, 8, 1
 	waitforvisualfinish
 	end
+
 Move_WEATHER_BALL_FIRE:
 	loadspritegfx ANIM_TAG_WEATHER_BALL
 	createsprite gVerticalDipSpriteTemplate, ANIM_ATTACKER, 2, 8, 1, ANIM_ATTACKER
@@ -11919,3 +11184,94 @@ Move_WEATHER_BALL_FIRE:
 	playsewithpan SE_M_GIGA_DRAIN, SOUND_PAN_TARGET
 	waitforvisualfinish
 	end
+
+Move_DRILL_RUN:
+	loadspritegfx ANIM_TAG_IMPACT
+	loadspritegfx ANIM_TAG_HORN_HIT
+	fadetobg BG_DRILL
+	waitbgfadeout
+	createvisualtask AnimTask_StartSlidingBg, 5, -2304, 768, 1, -1
+
+Move_HIDDEN_POWER_NORMAL:
+	goto Move_HIDDEN_POWER
+
+Move_HIDDEN_POWER_FIRE:
+	goto Move_HIDDEN_POWER
+
+Move_HIDDEN_POWER_WATER:
+	goto Move_HIDDEN_POWER
+
+Move_HIDDEN_POWER_ELECTRIC:
+	goto Move_HIDDEN_POWER
+
+Move_HIDDEN_POWER_GRASS:
+	goto Move_HIDDEN_POWER
+
+Move_HIDDEN_POWER_ICE:
+	goto Move_HIDDEN_POWER
+
+Move_HIDDEN_POWER_FIGHTING:
+	goto Move_HIDDEN_POWER
+
+Move_HIDDEN_POWER_POISON:
+	goto Move_HIDDEN_POWER
+
+Move_HIDDEN_POWER_GROUND:
+	goto Move_HIDDEN_POWER
+
+Move_HIDDEN_POWER_FLYING:
+	goto Move_HIDDEN_POWER
+
+Move_HIDDEN_POWER_PSYCHIC:
+	goto Move_HIDDEN_POWER
+
+Move_HIDDEN_POWER_BUG:
+	goto Move_HIDDEN_POWER
+
+Move_HIDDEN_POWER_ROCK:
+	goto Move_HIDDEN_POWER
+
+Move_HIDDEN_POWER_GHOST:
+	goto Move_HIDDEN_POWER
+
+Move_HIDDEN_POWER_DRAGON:
+	goto Move_HIDDEN_POWER
+
+Move_HIDDEN_POWER_DARK:
+	goto Move_HIDDEN_POWER
+
+Move_HIDDEN_POWER_STEEL:
+	goto Move_HIDDEN_POWER
+
+Move_EARTH_POWER:
+	goto Move_FISSURE
+
+Move_HEAD_SMASH:
+	goto SkullBashAttack
+
+Move_GUNK_SHOT:
+	goto Move_SLUDGE_BOMB
+
+Move_WILD_CHARGE:
+	goto Move_SPARK
+
+Move_X_SCISSORS:
+	goto Move_FURY_CUTTER
+
+Move_DRACO_METEOR:
+	goto Move_ERUPTION
+
+Move_FORCE_PALM:
+	goto Move_ARM_THRUST
+
+Move_SHADOW_SNEAK:
+	goto Move_DESTINY_BOND
+
+Move_AIR_SLASH:
+	goto Move_AIR_CUTTER
+
+Move_FLASH_CANNON:
+	goto Move_METAL_SOUND
+
+Move_ICE_SHARD:
+	goto Move_ICICLE_SPEAR

@@ -289,7 +289,7 @@ static const struct TrainerMonItemCustomMoves sParty_BugCatcherDoug[] = {
         .lvl = 10,
         .species = SPECIES_PARAS,
         .heldItem = ITEM_NONE,
-        .moves = {MOVE_XSCISSORS, MOVE_ROCK_TOMB, MOVE_GIGA_DRAIN, MOVE_TOXIC},
+        .moves = {MOVE_X_SCISSORS, MOVE_ROCK_TOMB, MOVE_GIGA_DRAIN, MOVE_TOXIC},
     },
     {
         .iv = 255,
@@ -5643,7 +5643,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderBrock[] = {
         .lvl = 16,
         .species = SPECIES_MAGCARGO,
         .heldItem = ITEM_ORAN_BERRY,
-        .moves = {MOVE_FLAME_WHEEL, MOVE_ROCK_TOMB, MOVE_HP_GRASS, MOVE_RECOVER}
+        .moves = {MOVE_FLAME_WHEEL, MOVE_ROCK_TOMB, MOVE_HIDDEN_POWER_GRASS, MOVE_RECOVER}
     },
     {
         .iv = 255,
