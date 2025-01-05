@@ -89,20 +89,6 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_SNORLAX",
-      "x": 14,
-      "y": 70,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route12_EventScript_Snorlax",
-      "flag": "FLAG_HIDE_ROUTE_12_SNORLAX"
-    },
-    {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKER",
       "x": 13,
       "y": 92,
@@ -170,20 +156,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route12_EventScript_ItemTM48",
       "flag": "FLAG_HIDE_ROUTE12_TM48"
-    },
-    {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 9,
-      "y": 101,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route12_EventScript_ItemIron",
-      "flag": "FLAG_HIDE_ROUTE12_IRON"
     },
     {
       "type": "object",
@@ -258,7 +230,9 @@
       "dest_warp_id": "2"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "sign",
@@ -275,36 +249,6 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route12_EventScript_FishingSign"
-    },
-    {
-      "type": "hidden_item",
-      "x": 18,
-      "y": 57,
-      "elevation": 3,
-      "item": "ITEM_HYPER_POTION",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE12_HYPER_POTION",
-      "quantity": 1,
-      "underfoot": false
-    },
-    {
-      "type": "hidden_item",
-      "x": 14,
-      "y": 70,
-      "elevation": 3,
-      "item": "ITEM_LEFTOVERS",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE12_LEFTOVERS",
-      "quantity": 1,
-      "underfoot": true
-    },
-    {
-      "type": "hidden_item",
-      "x": 9,
-      "y": 116,
-      "elevation": 3,
-      "item": "ITEM_RARE_CANDY",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE12_RARE_CANDY",
-      "quantity": 1,
-      "underfoot": false
     }
   ]
 }
