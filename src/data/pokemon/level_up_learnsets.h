@@ -4861,16 +4861,6 @@ static const u16 sSolrockLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const u16 sAzurillLevelUpLearnset[] = {
-    LEVEL_UP_MOVE(1, MOVE_SPLASH),
-    LEVEL_UP_MOVE(3, MOVE_CHARM),
-    LEVEL_UP_MOVE(6, MOVE_TAIL_WHIP),
-    LEVEL_UP_MOVE(10, MOVE_BUBBLE),
-    LEVEL_UP_MOVE(15, MOVE_SLAM),
-    LEVEL_UP_MOVE(21, MOVE_WATER_GUN),
-    LEVEL_UP_END
-};
-
 static const u16 sSpoinkLevelUpLearnset[] = {
     LEVEL_UP_MOVE(1, MOVE_SPLASH),
     LEVEL_UP_MOVE(7, MOVE_PSYWAVE),
@@ -5019,17 +5009,6 @@ static const u16 sAltariaLevelUpLearnset[] = {
     LEVEL_UP_MOVE(45, MOVE_REFRESH),
     LEVEL_UP_MOVE(54, MOVE_PERISH_SONG),
     LEVEL_UP_MOVE(59, MOVE_SKY_ATTACK),
-    LEVEL_UP_END
-};
-
-static const u16 sWynautLevelUpLearnset[] = {
-    LEVEL_UP_MOVE(1, MOVE_SPLASH),
-    LEVEL_UP_MOVE(1, MOVE_CHARM),
-    LEVEL_UP_MOVE(1, MOVE_ENCORE),
-    LEVEL_UP_MOVE(15, MOVE_COUNTER),
-    LEVEL_UP_MOVE(15, MOVE_MIRROR_COAT),
-    LEVEL_UP_MOVE(15, MOVE_SAFEGUARD),
-    LEVEL_UP_MOVE(15, MOVE_DESTINY_BOND),
     LEVEL_UP_END
 };
 
