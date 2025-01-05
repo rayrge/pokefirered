@@ -3,7 +3,7 @@
 
 static const u16 sBulbasaurLevelUpLearnset[] = {
     LEVEL_UP_MOVE(1, MOVE_TACKLE),
-    LEVEL_UP_MOVE(4, MOVE_ABSORB),
+    LEVEL_UP_MOVE(6, MOVE_ABSORB),
     LEVEL_UP_MOVE(7, MOVE_VINE_WHIP),
     LEVEL_UP_MOVE(10, MOVE_HEADBUTT),
     LEVEL_UP_MOVE(14, MOVE_ACID),
@@ -56,7 +56,7 @@ static const u16 sVenusaurLevelUpLearnset[] = {
 
 static const u16 sCharmanderLevelUpLearnset[] = {
     LEVEL_UP_MOVE(1, MOVE_SCRATCH),
-    LEVEL_UP_MOVE(1, MOVE_EMBER),
+    LEVEL_UP_MOVE(6, MOVE_EMBER),
     LEVEL_UP_MOVE(7, MOVE_FLAME_WHEEL),
     LEVEL_UP_MOVE(13, MOVE_METAL_CLAW),
     LEVEL_UP_MOVE(19, MOVE_QUICK_ATTACK),
@@ -103,7 +103,7 @@ static const u16 sCharizardLevelUpLearnset[] = {
 
 static const u16 sSquirtleLevelUpLearnset[] = {
     LEVEL_UP_MOVE(1, MOVE_TACKLE),
-    LEVEL_UP_MOVE(4, MOVE_WATER_GUN),
+    LEVEL_UP_MOVE(6, MOVE_WATER_GUN),
     LEVEL_UP_MOVE(10, MOVE_BITE),
     LEVEL_UP_MOVE(13, MOVE_BUBBLE_BEAM),
     LEVEL_UP_MOVE(18, MOVE_SECRET_POWER),
