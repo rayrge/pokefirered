@@ -48,7 +48,7 @@ Route4_EventScript_Falkner::
 Falkner_Intro::
 # 28 "data/maps/Route4/scripts.pory"
 	.string "I've been searching for a legendary\n"
-	.string "pilot who ruled the lands\p"
+	.string "pilot who ruled the lands.\p"
 	.string "Have you heard of the legend?$"
 
 Falkner_Outro::

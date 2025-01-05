@@ -22,14 +22,12 @@ PewterCity_Mart_EventScript_Clerk::
 
 	.align 2
 PewterCity_Mart_Items::
-	.2byte ITEM_POKE_BALL
-	.2byte ITEM_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_AWAKENING
-	.2byte ITEM_BURN_HEAL
-	.2byte ITEM_ESCAPE_ROPE
-	.2byte ITEM_REPEL
+	.2byte ITEM_ORAN_BERRY
+	.2byte ITEM_CHESTO_BERRY
+	.2byte ITEM_CHERI_BERRY
+	.2byte ITEM_PERSIM_BERRY
+	.2byte ITEM_RAWST_BERRY
+	.2byte ITEM_ASPEAR_BERRY
 	.2byte ITEM_NONE
 	release
 	end
