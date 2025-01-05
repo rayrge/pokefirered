@@ -406,7 +406,7 @@ gBattleAnims_Moves::
 	.4byte Move_AIR_SLASH
 	.4byte Move_FLASH_CANNON
 	.4Byte Move_ICE_SHARD
-	.4Byte
+	.4Byte Move_NIGHT_SLASH
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2

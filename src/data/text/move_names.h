@@ -384,5 +384,6 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_FORCE_PALM]             = _("FORCE PALM"),
     [MOVE_AIR_SLASH]              = _("AIR SLASH"),
     [MOVE_FLASH_CANNON]           = _("FLASH CANNON"),
-    [MOVE_ICE_SHARD]              = _("ICE SHARD")
+    [MOVE_ICE_SHARD]              = _("ICE SHARD"),
+    [MOVE_NIGHT_SLASH]            = _("NIGHT SLASH")
 };

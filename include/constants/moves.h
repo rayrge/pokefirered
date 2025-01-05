@@ -387,8 +387,8 @@
 #define MOVE_AIR_SLASH 383
 #define MOVE_FLASH_CANNON 384
 #define MOVE_ICE_SHARD 385
-
-#define MOVES_COUNT 386
+#define MOVE_NIGHT_SLASH 386
+#define MOVES_COUNT 387
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF
