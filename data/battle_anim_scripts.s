@@ -407,6 +407,7 @@ gBattleAnims_Moves::
 	.4byte Move_FLASH_CANNON
 	.4Byte Move_ICE_SHARD
 	.4Byte Move_NIGHT_SLASH
+	.4Byte Move_AQUA_JET
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -11297,3 +11298,6 @@ Move_NIGHT_SLASH:
 	restorebg
 	waitbgfadein
 	end
+
+Move_AQUA_JET:
+	goto Move_WATERFALL
