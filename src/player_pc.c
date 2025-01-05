@@ -101,6 +101,8 @@ static const struct ItemSlot gNewGamePCItems[] = {
     { ITEM_MASTER_BALL, 999 },
     { ITEM_RARE_CANDY, 999 },
     { ITEM_FULL_RESTORE, 999},
+    { ITEM_MAX_REPEL, 999},
+    { ITEM_MAX_ELIXIR, 999},
     { ITEM_OLD_ROD, 1},
     { ITEM_NONE,   0 }
 };
