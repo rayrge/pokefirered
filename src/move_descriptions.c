@@ -367,6 +367,7 @@ const u8 gMoveDescription_ShadowSneak[] = _("A fast attack\nthat always strikes\
 const u8 gMoveDescription_AirSlash[] = _("Hacks with wind.\nMay cause Flinching");
 const u8 gMoveDescription_FlashCannon[] = _("May Lower Foe's\nDEF.");
 const u8 gMoveDescription_IceShard[] = _("A fast attack\nthat always strikes\nfirst.");
+const u8 gMoveDescription_NightSlash[] = _("A brutal slashing\nattack.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND                  - 1] = gMoveDescription_Pound,
@@ -754,4 +755,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_AIR_SLASH              - 1] = gMoveDescription_AirSlash,
     [MOVE_FLASH_CANNON           - 1] = gMoveDescription_FlashCannon,
     [MOVE_ICE_SHARD              - 1] = gMoveDescription_IceShard,
+    [MOVE_NIGHT_SLASH            - 1] = gMoveDescription_NightSlash,
 };
