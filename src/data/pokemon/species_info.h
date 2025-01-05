@@ -3836,12 +3836,12 @@ const struct SpeciesInfo gSpeciesInfo[] =
     },
     [SPECIES_DITTO] =
     {
-        .baseHP = 48,
-        .baseAttack = 48,
-        .baseDefense = 48,
-        .baseSpeed = 48,
-        .baseSpAttack = 48,
-        .baseSpDefense = 48,
+        .baseHP = 100,
+        .baseAttack = 100,
+        .baseDefense = 100,
+        .baseSpeed = 100,
+        .baseSpAttack = 100,
+        .baseSpDefense = 100,
         .types = {TYPE_NORMAL, TYPE_NORMAL},
         .catchRate = 35,
         .expYield = 61,
