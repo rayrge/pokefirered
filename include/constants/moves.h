@@ -382,7 +382,10 @@
 #define MOVE_ICE_SHARD 378
 #define MOVE_EARTH_POWER 379
 #define MOVE_DRILL_RUN 380
-#define MOVES_COUNT 381
+#define MOVE_WEATHER_BALL_WATER 381
+#define MOVE_WEATHER_BALL_FIRE 382
+
+#define MOVES_COUNT 383
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF
