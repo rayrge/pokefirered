@@ -5316,10 +5316,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_MARILL] =
     {
         .baseHP = 70,
-        .baseAttack = 20,
+        .baseAttack = 40,
         .baseDefense = 50,
         .baseSpeed = 40,
-        .baseSpAttack = 60,
+        .baseSpAttack = 70,
         .baseSpDefense = 50,
         .types = {TYPE_WATER, TYPE_WATER},
         .catchRate = 190,
@@ -5345,10 +5345,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_AZUMARILL] =
     {
         .baseHP = 100,
-        .baseAttack = 60,
+        .baseAttack = 70,
         .baseDefense = 80,
         .baseSpeed = 50,
-        .baseSpAttack = 60,
+        .baseSpAttack = 85,
         .baseSpDefense = 80,
         .types = {TYPE_WATER, TYPE_WATER},
         .catchRate = 75,
@@ -6011,12 +6011,12 @@ const struct SpeciesInfo gSpeciesInfo[] =
     },
     [SPECIES_GLIGAR] =
     {
-        .baseHP = 65,
-        .baseAttack = 75,
-        .baseDefense = 105,
-        .baseSpeed = 85,
+        .baseHP = 75,
+        .baseAttack = 95,
+        .baseDefense = 125,
+        .baseSpeed = 95,
         .baseSpAttack = 35,
-        .baseSpDefense = 65,
+        .baseSpDefense = 90,
         .types = {TYPE_GROUND, TYPE_FLYING},
         .catchRate = 60,
         .expYield = 108,
@@ -6534,10 +6534,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_DELIBIRD] =
     {
         .baseHP = 45,
-        .baseAttack = 55,
+        .baseAttack = 90,
         .baseDefense = 45,
-        .baseSpeed = 75,
-        .baseSpAttack = 65,
+        .baseSpeed = 85,
+        .baseSpAttack = 100,
         .baseSpDefense = 45,
         .types = {TYPE_ICE, TYPE_FLYING},
         .catchRate = 45,
