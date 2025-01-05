@@ -28,6 +28,7 @@ PewterCity_Mart_Items::
 	.2byte ITEM_PERSIM_BERRY
 	.2byte ITEM_RAWST_BERRY
 	.2byte ITEM_ASPEAR_BERRY
+	.2byte ITEM_PECHA_BERRY
 	.2byte ITEM_NONE
 	release
 	end
