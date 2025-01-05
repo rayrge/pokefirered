@@ -1488,7 +1488,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_DUGTRIO] =
     {
         .baseHP = 35,
-        .baseAttack = 80,
+        .baseAttack = 110,
         .baseDefense = 50,
         .baseSpeed = 120,
         .baseSpAttack = 50,
