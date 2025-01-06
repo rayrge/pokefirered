@@ -15,11 +15,9 @@ Route2_EastBuilding_EventScript_Aide::
 	getpartysize
 	compare VAR_RESULT, 6
 	goto_if_eq Script_PlayerHasFullParty
-	random 3
-	copyvar VAR_0x8008, VAR_RESULT
-	call_if_eq VAR_0x8008, 0, Script_CyndaquilEgg
-	call_if_eq VAR_0x8008, 1, Script_ChikoritaEgg
-	call_if_eq VAR_0x8008, 2, Script_TotodileEgg	
+	call_if_eq VAR_STARTER_MON, 2, Script_RollZard
+	call_if_eq VAR_STARTER_MON, 1, Script_RollTurtle
+	call_if_eq VAR_STARTER_MON, 0, Script_RollVenu	
 	waitfanfare
 	setflag FLAG_GOT_HM05
 	msgbox Route2_EastBuilding_Text_ExplainHM05
@@ -35,6 +33,27 @@ Script_PlayerAnsweredNo::
 	msgbox Text_PlayerAnsweredNo, MSGBOX_DEFAULT
 	release
 	end
+
+Script_RollZard::
+	random 2
+	copyvar VAR_0x8008, VAR_RESULT
+	call_if_eq VAR_0x8008, 0, Script_ChikoritaEgg
+	call_if_eq VAR_0x8008, 1, Script_TotodileEgg
+	return
+
+Script_RollVenu::
+	random 2
+	copyvar VAR_0x8008, VAR_RESULT
+	call_if_eq VAR_0x8008, 0, Script_CyndaquilEgg
+	call_if_eq VAR_0x8008, 1, Script_TotodileEgg
+	return
+
+Script_RollTurtle::
+	random 2
+	copyvar VAR_0x8008, VAR_RESULT
+	call_if_eq VAR_0x8008, 0, Script_CyndaquilEgg
+	call_if_eq VAR_0x8008, 1, Script_ChikoritaEgg
+	return
 
 Script_CyndaquilEgg::
 	giveegg SPECIES_CYNDAQUIL

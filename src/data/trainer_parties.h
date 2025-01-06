@@ -293,14 +293,14 @@ static const struct TrainerMonItemCustomMoves sParty_BugCatcherDoug[] = {
     },
     {
         .iv = 255,
-        .lvl = 16,
+        .lvl = 12,
         .species = SPECIES_WEEDLE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_SLUDGE},
     },
     {
         .iv = 255,
-        .lvl = 16,
+        .lvl = 12,
         .species = SPECIES_CATERPIE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_TWINEEDLE}
@@ -378,16 +378,41 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherJames[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherKent[] = {
+static const struct TrainerMonItemCustomMoves sParty_BirdKeeperFalkner[] = {
     {
-        .iv = 0,
-        .lvl = 11,
-        .species = SPECIES_WEEDLE,
+        .iv = 255,
+        .lvl = 21,
+        .species = SPECIES_NOCTOWL,
+        .heldItem = ITEM_TWISTED_SPOON,
+        .moves = {MOVE_AERIAL_ACE, MOVE_HYPNOSIS, MOVE_PSYBEAM, MOVE_NIGHT_SHADE},
     },
     {
-        .iv = 0,
-        .lvl = 11,
-        .species = SPECIES_KAKUNA,
+        .iv = 255,
+        .lvl = 21,
+        .species = SPECIES_MURKROW,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_AERIAL_ACE, MOVE_FAINT_ATTACK, MOVE_NIGHT_SHADE, MOVE_NONE},
+    },
+    {
+        .iv = 255,
+        .lvl = 21,
+        .species = SPECIES_SKIPLOOM,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_AERIAL_ACE, MOVE_GIGA_DRAIN, MOVE_LEECH_SEED, MOVE_STUN_SPORE}
+    },
+    {
+        .iv = 255,
+        .lvl = 21,
+        .species = SPECIES_NATU,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_FLY, MOVE_PSYBEAM, MOVE_GIGA_DRAIN, MOVE_NIGHT_SHADE}
+    },
+    {
+        .iv = 255,
+        .lvl = 21,
+        .species = SPECIES_DELIBIRD,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_WING_ATTACK, MOVE_AURORA_BEAM, MOVE_KARATE_CHOP, MOVE_ICY_WIND}
     },
 };
 
@@ -870,18 +895,34 @@ static const struct TrainerMonNoItemDefaultMoves sParty_SailorDwayne[] = {
     },
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_CamperLiam[] = {
+static const struct TrainerMonItemCustomMoves sParty_CamperLiam[] = {
     {
-        .iv = 0,
-        .lvl = 10,
-        .species = SPECIES_GEODUDE,
-        .moves = {MOVE_TACKLE, MOVE_DEFENSE_CURL, MOVE_NONE, MOVE_NONE},
+        .iv = 255,
+        .lvl = 13,
+        .species = SPECIES_OMANYTE,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_BUBBLE_BEAM, MOVE_ROCK_TOMB, MOVE_AURORA_BEAM, MOVE_SPIKES},
     },
     {
-        .iv = 0,
+        .iv = 255,
         .lvl = 11,
-        .species = SPECIES_SANDSHREW,
-        .moves = {MOVE_SCRATCH, MOVE_DEFENSE_CURL, MOVE_SAND_ATTACK, MOVE_NONE},
+        .species = SPECIES_RHYHORN,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_DRILL_RUN, MOVE_ROCK_TOMB, MOVE_MEGAHORN, MOVE_NONE},
+    },
+    {
+        .iv = 255,
+        .lvl = 10,
+        .species = SPECIES_AERODACTYL,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_GUST, MOVE_ROCK_THROW, MOVE_NONE, MOVE_NONE}
+    },
+    {
+        .iv = 255,
+        .lvl = 11,
+        .species = SPECIES_DIGLETT,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_DIG, MOVE_ROCK_TOMB, MOVE_AERIAL_ACE, MOVE_NONE}
     },
 };
 

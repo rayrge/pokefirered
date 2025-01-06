@@ -407,6 +407,7 @@ gBattleAnims_Moves::
 	.4byte Move_FLASH_CANNON
 	.4Byte Move_ICE_SHARD
 	.4Byte Move_NIGHT_SLASH
+	.4Byte Move_AQUA_JET
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -11187,11 +11188,7 @@ Move_WEATHER_BALL_FIRE:
 	end
 
 Move_DRILL_RUN:
-	loadspritegfx ANIM_TAG_IMPACT
-	loadspritegfx ANIM_TAG_HORN_HIT
-	fadetobg BG_DRILL
-	waitbgfadeout
-	createvisualtask AnimTask_StartSlidingBg, 5, -2304, 768, 1, -1
+	goto Move_HORN_DRILL
 
 Move_HIDDEN_POWER_NORMAL:
 	goto Move_HIDDEN_POWER
@@ -11297,3 +11294,6 @@ Move_NIGHT_SLASH:
 	restorebg
 	waitbgfadein
 	end
+
+Move_AQUA_JET:
+	goto Move_WATERFALL

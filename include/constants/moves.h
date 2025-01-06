@@ -388,7 +388,8 @@
 #define MOVE_FLASH_CANNON 384
 #define MOVE_ICE_SHARD 385
 #define MOVE_NIGHT_SLASH 386
-#define MOVES_COUNT 387
+#define MOVE_AQUA_JET 387
+#define MOVES_COUNT 388
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

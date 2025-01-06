@@ -111,7 +111,7 @@
 #define TRAINER_BUG_CATCHER_COLTON               105
 #define TRAINER_BUG_CATCHER_GREG                 106
 #define TRAINER_BUG_CATCHER_JAMES                107
-#define TRAINER_BUG_CATCHER_KENT                 108
+#define TRAINER_BIRD_KEEPER_FALKNER              108
 #define TRAINER_BUG_CATCHER_ROBBY                109
 #define TRAINER_BUG_CATCHER_CALE                 110
 #define TRAINER_BUG_CATCHER_KEIGO                111
