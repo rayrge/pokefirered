@@ -65,3 +65,4 @@ prefabs.json
 *.ss0
 *.ss0
 pokefirered.ss0
+src/data/map_group_count.h

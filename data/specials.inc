@@ -453,4 +453,5 @@ gSpecials::
 	def_special LoopWingFlapSound
 	def_special CreateEnemyEventMon
 	def_special CB2_ShowEvIv_PlayerParty
+	def_special ScriptGetPartyMonSpecies
 gSpecialsEnd::

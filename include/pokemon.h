@@ -363,6 +363,7 @@ u8 GetSecretBaseTrainerPicIndex(void);
 u8 GetSecretBaseTrainerNameIndex(void);
 bool8 IsPlayerPartyAndPokemonStorageFull(void);
 void GetSpeciesName(u8 *name, u16 species);
+const u16 *GetSpeciesLevelUpLearnset(u16 species);
 u8 CalculatePPWithBonus(u16 move, u8 ppBonuses, u8 moveIndex);
 void RemoveMonPPBonus(struct Pokemon *mon, u8 moveIndex);
 void RemoveBattleMonPPBonus(struct BattlePokemon *mon, u8 moveIndex);
@@ -429,5 +430,8 @@ u8 *MonSpritesGfxManager_GetSpritePtr(u8 bufferId);
 void DeletePartyMon(u8 position);
 void DeleteFaintedPartyMons(void);
 void CalculateMonStatsPomegSafety(struct Pokemon *mon);
+u8 GetNatureFromPersonality(u32 personality);
+u8 SendMonToPC(struct Pokemon* mon);
+void GiveBoxMonInitialMoveset_Fast(struct BoxPokemon *boxMon);
 
 #endif // GUARD_POKEMON_H
