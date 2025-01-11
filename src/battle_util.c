@@ -3153,7 +3153,7 @@ u8 IsMonDisobedient(void)
 {
     s32 rnd;
     s32 calc;
-    u8 obedienceLevel = 0;
+    u8 obedienceLevel = 100;
 
     if ((gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_POKEDUDE)))
         return 0;
@@ -3166,15 +3166,6 @@ u8 IsMonDisobedient(void)
             return 0;
         if (FlagGet(FLAG_BADGE08_GET))
             return 0;
-
-        obedienceLevel = 10;
-
-        if (FlagGet(FLAG_BADGE02_GET))
-            obedienceLevel = 30;
-        if (FlagGet(FLAG_BADGE04_GET))
-            obedienceLevel = 50;
-        if (FlagGet(FLAG_BADGE06_GET))
-            obedienceLevel = 70;
     }
 
     if (gBattleMons[gBattlerAttacker].level <= obedienceLevel)
