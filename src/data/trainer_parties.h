@@ -111,16 +111,27 @@ static const struct TrainerMonNoItemDefaultMoves sParty_EliteFourGlacia[] = {DUM
 static const struct TrainerMonNoItemDefaultMoves sParty_EliteFourDrake[] = {DUMMY_TRAINER_MON};
 
 // Start of actual trainer data
-static const struct TrainerMonNoItemDefaultMoves sParty_YoungsterBen[] = {
+static const struct TrainerMonItemCustomMoves sParty_YoungsterBen[] = {
     {
-        .iv = 0,
-        .lvl = 11,
-        .species = SPECIES_RATTATA,
+        .iv = 255,
+        .lvl = 16,
+        .species = SPECIES_QUILAVA,
+        .heldItem = ITEM_ORAN_BERRY,
+        .moves = {MOVE_EMBER, MOVE_DIG, MOVE_QUICK_ATTACK, MOVE_NONE},
     },
     {
-        .iv = 0,
-        .lvl = 11,
-        .species = SPECIES_EKANS,
+        .iv = 255,
+        .lvl = 16,
+        .species = SPECIES_BAYLEEF,
+        .heldItem = ITEM_ORAN_BERRY,
+        .moves = {MOVE_VINE_WHIP, MOVE_DIG, MOVE_TOXIC, MOVE_SYNTHESIS},
+    },
+    {
+        .iv = 255,
+        .lvl = 16,
+        .species = SPECIES_CROCONAW,
+        .heldItem = ITEM_ORAN_BERRY,
+        .moves = {MOVE_WATER_GUN, MOVE_DIG, MOVE_BITE, MOVE_NONE}
     },
 };
 
