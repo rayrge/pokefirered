@@ -124,7 +124,7 @@
 #define TRAINER_LASS_ROBIN                       118
 #define TRAINER_LASS_CRISSY                      119
 #define TRAINER_LASS_MIRIAM                      120
-#define TRAINER_LASS_IRIS                        121
+#define TRAINER_LASS_TOMO                        121
 #define TRAINER_LASS_RELI                        122
 #define TRAINER_LASS_ALI                         123
 #define TRAINER_LASS_2                           124

@@ -635,11 +635,41 @@ static const struct TrainerMonNoItemDefaultMoves sParty_LassMiriam[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LassIris[] = {
+static const struct TrainerMonItemCustomMoves sParty_LassTomo[] = {
     {
-        .iv = 0,
-        .lvl = 14,
-        .species = SPECIES_CLEFAIRY,
+        .iv = 255,
+        .lvl = 20,
+        .species = SPECIES_STARYU,
+        .heldItem = ITEM_ORAN_BERRY,
+        .moves = {MOVE_WATER_PULSE, MOVE_EXTRASENSORY, MOVE_SHOCK_WAVE, MOVE_RECOVER},
+    },
+    {
+        .iv = 255,
+        .lvl = 20,
+        .species = SPECIES_HERACROSS,
+        .heldItem = ITEM_ORAN_BERRY,
+        .moves = {MOVE_ROCK_SMASH, MOVE_PIN_MISSILE, MOVE_CUT, MOVE_NONE},
+    },
+    {
+        .iv = 255,
+        .lvl = 20,
+        .species = SPECIES_EEVEE,
+        .heldItem = ITEM_ORAN_BERRY,
+        .moves = {MOVE_GROWTH, MOVE_WATER_PULSE, MOVE_FAINT_ATTACK, MOVE_MOONLIGHT}
+    },
+    {
+        .iv = 255,
+        .lvl = 20,
+        .species = SPECIES_ELEKID,
+        .heldItem = ITEM_ORAN_BERRY,
+        .moves = {MOVE_THUNDER_PUNCH, MOVE_ICE_PUNCH, MOVE_FIRE_PUNCH, MOVE_THUNDER_WAVE}
+    },
+    {
+        .iv = 255,
+        .lvl = 20,
+        .species = SPECIES_DRATINI,
+        .heldItem = ITEM_ORAN_BERRY,
+        .moves = {MOVE_DRAGON_CLAW, MOVE_EXTREME_SPEED, MOVE_NONE, MOVE_NONE}
     },
 };
 

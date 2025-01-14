@@ -1202,15 +1202,15 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_LassMiriam),
     },
-    [TRAINER_LASS_IRIS] = {
+    [TRAINER_LASS_TOMO] = {
         .trainerClass = TRAINER_CLASS_LASS,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE | F_TRAINER_FEMALE,
         .trainerPic = TRAINER_PIC_LASS,
-        .trainerName = _("IRIS"),
+        .trainerName = _("TOMO"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_LassIris),
+        .party = ITEM_CUSTOM_MOVES(sParty_LassTomo),
     },
     [TRAINER_LASS_RELI] = {
         .trainerClass = TRAINER_CLASS_LASS,

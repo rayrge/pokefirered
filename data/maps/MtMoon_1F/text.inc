@@ -46,17 +46,14 @@ MtMoon_1F_Text_JovanPostBattle::
     .string "I have to find stronger POKéMON.\n"
     .string "Where might they be?$"
 
-MtMoon_1F_Text_IrisIntro::
-    .string "What?\n"
-    .string "I'm waiting for my friends to find\l"
-    .string "me here.$"
+MtMoon_1F_Text_TomoIntro::
+    .string "I am not a joke reference.$"
 
-MtMoon_1F_Text_IrisDefeat::
+MtMoon_1F_Text_TomoDefeat::
     .string "I lost?$"
 
-MtMoon_1F_Text_IrisPostBattle::
-    .string "I came because I heard there are\n"
-    .string "some very rare fossils here.$"
+MtMoon_1F_Text_TomoPostBattle::
+    .string "Huh.$"
 
 MtMoon_1F_Text_KentIntro::
     .string "Suspicious men are in the cave.\n"

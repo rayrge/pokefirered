@@ -25,9 +25,9 @@ MtMoon_1F_EventScript_Miriam::
 	msgbox MtMoon_1F_Text_MiriamPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-MtMoon_1F_EventScript_Iris::
-	trainerbattle_single TRAINER_LASS_IRIS, MtMoon_1F_Text_IrisIntro, MtMoon_1F_Text_IrisDefeat
-	msgbox MtMoon_1F_Text_IrisPostBattle, MSGBOX_AUTOCLOSE
+MtMoon_1F_EventScript_Tomo::
+	trainerbattle_single TRAINER_LASS_TOMO, MtMoon_1F_Text_TomoIntro, MtMoon_1F_Text_TomoDefeat
+	msgbox MtMoon_1F_Text_TomoPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MtMoon_1F_EventScript_Jovan::
