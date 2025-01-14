@@ -648,7 +648,7 @@ static const struct TrainerMonItemCustomMoves sParty_LassTomo[] = {
         .lvl = 20,
         .species = SPECIES_HERACROSS,
         .heldItem = ITEM_ORAN_BERRY,
-        .moves = {MOVE_ROCK_SMASH, MOVE_PIN_MISSILE, MOVE_CUT, MOVE_NONE},
+        .moves = {MOVE_BRICK_BREAK, MOVE_PIN_MISSILE, MOVE_HORN_DRILL, MOVE_HORN_ATTACK},
     },
     {
         .iv = 255,
