@@ -1351,16 +1351,27 @@ static const struct TrainerMonNoItemDefaultMoves sParty_PokemaniacAshton[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_SuperNerdJovan[] = {
+static const struct TrainerMonItemCustomMoves sParty_SuperNerdJovan[] = {
     {
-        .iv = 0,
-        .lvl = 11,
+        .iv = 255,
+        .lvl = 20,
         .species = SPECIES_MAGNEMITE,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_SHOCK_WAVE, MOVE_FLASH_CANNON, MOVE_SUPERSONIC, MOVE_NONE},
     },
     {
-        .iv = 0,
-        .lvl = 11,
+        .iv = 255,
+        .lvl = 20,
+        .species = SPECIES_KOFFING,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_SLUDGE, MOVE_FLAMETHROWER, MOVE_HIDDEN_POWER_GRASS, MOVE_NONE}
+    },
+    {
+        .iv = 255,
+        .lvl = 20,
         .species = SPECIES_VOLTORB,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_SHOCK_WAVE, MOVE_SELF_DESTRUCT, MOVE_TOXIC, MOVE_NONE},
     },
 };
 
