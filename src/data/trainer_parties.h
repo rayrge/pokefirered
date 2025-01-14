@@ -556,24 +556,51 @@ static const struct TrainerMonNoItemDefaultMoves sParty_LassJanice[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LassSally[] = {
+static const struct TrainerMonItemCustomMoves sParty_LassSally[] = {
     {
-        .iv = 0,
-        .lvl = 10,
-        .species = SPECIES_RATTATA,
+        .iv = 255,
+        .lvl = 17,
+        .species = SPECIES_NIDORINO,
+        .heldItem = ITEM_ORAN_BERRY,
+        .moves = {MOVE_SLUDGE, MOVE_DIG, MOVE_DOUBLE_KICK, MOVE_TOXIC},
     },
     {
-        .iv = 0,
-        .lvl = 10,
-        .species = SPECIES_NIDORAN_F,
+        .iv = 255,
+        .lvl = 17,
+        .species = SPECIES_NIDORINA,
+        .heldItem = ITEM_ORAN_BERRY,
+        .moves = {MOVE_SLUDGE, MOVE_DIG, MOVE_DOUBLE_KICK, MOVE_TOXIC},
+    },
+    {
+        .iv = 255,
+        .lvl = 17,
+        .species = SPECIES_FLAAFFY,
+        .heldItem = ITEM_ORAN_BERRY,
+        .moves = {MOVE_THUNDER_SHOCK, MOVE_THUNDER_WAVE, MOVE_SEISMIC_TOSS, MOVE_HIDDEN_POWER_FIRE}
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LassRobin[] = {
+static const struct TrainerMonItemCustomMoves sParty_LassRobin[] = {
     {
-        .iv = 0,
-        .lvl = 14,
-        .species = SPECIES_JIGGLYPUFF,
+        .iv = 255,
+        .lvl = 18,
+        .species = SPECIES_SLOWPOKE,
+        .heldItem = ITEM_LEPPA_BERRY,
+        .moves = {MOVE_WATER_PULSE, MOVE_EXTRASENSORY, MOVE_SLACK_OFF, MOVE_RECYCLE},
+    },
+    {
+        .iv = 255,
+        .lvl = 18,
+        .species = SPECIES_PORYGON,
+        .heldItem = ITEM_LEPPA_BERRY,
+        .moves = {MOVE_TRI_ATTACK, MOVE_HIDDEN_POWER_ICE, MOVE_RECOVER, MOVE_RECYCLE},
+    },
+    {
+        .iv = 255,
+        .lvl = 18,
+        .species = SPECIES_CHANSEY,
+        .heldItem = ITEM_LEPPA_BERRY,
+        .moves = {MOVE_SEISMIC_TOSS, MOVE_THUNDER_WAVE, MOVE_SOFT_BOILED, MOVE_RECYCLE}
     },
 };
 
