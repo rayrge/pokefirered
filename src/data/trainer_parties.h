@@ -3921,84 +3921,117 @@ static const struct TrainerMonNoItemCustomMoves sParty_RivalRoute22EarlyCharmand
     },
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_RivalCeruleanSquirtle[] = {
+static const struct TrainerMonItemCustomMoves sParty_RivalCeruleanSquirtle[] = {
     {
-        .iv = 50,
-        .lvl = 17,
+        .iv = 255,
+        .lvl = 24,
+        .species = SPECIES_MANTINE,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_WING_ATTACK, MOVE_BUBBLE_BEAM, MOVE_EARTHQUAKE, MOVE_REST},
+    },
+    {
+        .iv = 255,
+        .lvl = 24,
+        .species = SPECIES_SUDOWOODO,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_ROCK_SLIDE, MOVE_EARTH_POWER, MOVE_HIDDEN_POWER_GRASS, MOVE_NONE},
+    },
+    {
+        .iv = 255,
+        .lvl = 24,
+        .species = SPECIES_RATICATE,
+        .heldItem = ITEM_SILK_SCARF,
+        .moves = {MOVE_BODY_SLAM, MOVE_PURSUIT, MOVE_DIG, MOVE_THUNDER}
+    },
+    {
+        .iv = 255,
+        .lvl = 24,
         .species = SPECIES_PIDGEOTTO,
-        .moves = {MOVE_TACKLE, MOVE_SAND_ATTACK, MOVE_GUST, MOVE_QUICK_ATTACK},
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_FLY, MOVE_STEEL_WING, MOVE_TOXIC, MOVE_RAIN_DANCE}
     },
     {
-        .iv = 50,
-        .lvl = 16,
-        .species = SPECIES_ABRA,
-        .moves = {MOVE_TELEPORT, MOVE_NONE, MOVE_NONE, MOVE_NONE},
-    },
-    {
-        .iv = 50,
-        .lvl = 15,
-        .species = SPECIES_RATTATA,
-        .moves = {MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_QUICK_ATTACK, MOVE_NONE},
-    },
-    {
-        .iv = 100,
-        .lvl = 18,
-        .species = SPECIES_SQUIRTLE,
-        .moves = {MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_WITHDRAW, MOVE_WATER_GUN},
+        .iv = 255,
+        .lvl = 24,
+        .species = SPECIES_WARTORTLE,
+        .heldItem = ITEM_MYSTIC_WATER,
+        .moves = {MOVE_BUBBLE_BEAM, MOVE_ICE_PUNCH, MOVE_FAKE_OUT, MOVE_BITE}
     },
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_RivalCeruleanBulbasaur[] = {
+static const struct TrainerMonItemCustomMoves sParty_RivalCeruleanBulbasaur[] = {
     {
-        .iv = 50,
-        .lvl = 17,
+        .iv = 255,
+        .lvl = 24,
+        .species = SPECIES_MANTINE,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_WING_ATTACK, MOVE_BUBBLE_BEAM, MOVE_EARTHQUAKE, MOVE_REST},
+    },
+    {
+        .iv = 255,
+        .lvl = 24,
+        .species = SPECIES_SUDOWOODO,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_ROCK_SLIDE, MOVE_EARTH_POWER, MOVE_HIDDEN_POWER_GRASS, MOVE_NONE},
+    },
+    {
+        .iv = 255,
+        .lvl = 24,
+        .species = SPECIES_RATICATE,
+        .heldItem = ITEM_SILK_SCARF,
+        .moves = {MOVE_BODY_SLAM, MOVE_PURSUIT, MOVE_DIG, MOVE_THUNDER}
+    },
+    {
+        .iv = 255,
+        .lvl = 24,
         .species = SPECIES_PIDGEOTTO,
-        .moves = {MOVE_TACKLE, MOVE_SAND_ATTACK, MOVE_GUST, MOVE_QUICK_ATTACK},
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_FLY, MOVE_STEEL_WING, MOVE_TOXIC, MOVE_SECRET_POWER}
     },
     {
-        .iv = 50,
-        .lvl = 16,
-        .species = SPECIES_ABRA,
-        .moves = {MOVE_TELEPORT, MOVE_NONE, MOVE_NONE, MOVE_NONE},
-    },
-    {
-        .iv = 50,
-        .lvl = 15,
-        .species = SPECIES_RATTATA,
-        .moves = {MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_QUICK_ATTACK, MOVE_NONE},
-    },
-    {
-        .iv = 100,
-        .lvl = 18,
-        .species = SPECIES_BULBASAUR,
-        .moves = {MOVE_SLEEP_POWDER, MOVE_POISON_POWDER, MOVE_VINE_WHIP, MOVE_LEECH_SEED},
+        .iv = 255,
+        .lvl = 24,
+        .species = SPECIES_IVYSAUR,
+        .heldItem = ITEM_MIRACLE_SEED,
+        .moves = {MOVE_GIGA_DRAIN, MOVE_SLEEP_POWDER, MOVE_SLUDGE, MOVE_LEECH_SEED}
     },
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_RivalCeruleanCharmander[] = {
+static const struct TrainerMonItemCustomMoves sParty_RivalCeruleanCharmander[] = {
     {
-        .iv = 50,
-        .lvl = 17,
+        .iv = 255,
+        .lvl = 24,
+        .species = SPECIES_MANTINE,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_WING_ATTACK, MOVE_BUBBLE_BEAM, MOVE_EARTHQUAKE, MOVE_REST},
+    },
+    {
+        .iv = 255,
+        .lvl = 24,
+        .species = SPECIES_SUDOWOODO,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_ROCK_SLIDE, MOVE_EARTH_POWER, MOVE_HIDDEN_POWER_GRASS, MOVE_NONE},
+    },
+    {
+        .iv = 255,
+        .lvl = 24,
+        .species = SPECIES_RATICATE,
+        .heldItem = ITEM_SILK_SCARF,
+        .moves = {MOVE_BODY_SLAM, MOVE_PURSUIT, MOVE_DIG, MOVE_THUNDER}
+    },
+    {
+        .iv = 255,
+        .lvl = 24,
         .species = SPECIES_PIDGEOTTO,
-        .moves = {MOVE_TACKLE, MOVE_SAND_ATTACK, MOVE_GUST, MOVE_QUICK_ATTACK},
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_FLY, MOVE_STEEL_WING, MOVE_TOXIC, MOVE_SUNNY_DAY}
     },
     {
-        .iv = 50,
-        .lvl = 16,
-        .species = SPECIES_ABRA,
-        .moves = {MOVE_TELEPORT, MOVE_NONE, MOVE_NONE, MOVE_NONE},
-    },
-    {
-        .iv = 50,
-        .lvl = 15,
-        .species = SPECIES_RATTATA,
-        .moves = {MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_QUICK_ATTACK, MOVE_NONE},
-    },
-    {
-        .iv = 100,
-        .lvl = 18,
-        .species = SPECIES_CHARMANDER,
-        .moves = {MOVE_METAL_CLAW, MOVE_EMBER, MOVE_GROWL, MOVE_SCRATCH},
+        .iv = 255,
+        .lvl = 24,
+        .species = SPECIES_CHARMELEON,
+        .heldItem = ITEM_CHARCOAL,
+        .moves = {MOVE_FIRE_PUNCH, MOVE_THUNDER_PUNCH, MOVE_WILL_O_WISP, MOVE_HIDDEN_POWER_WATER}
     },
 };
 
@@ -4335,7 +4368,7 @@ static const struct TrainerMonItemCustomMoves sParty_TeamRocketGrunt[] = {
         .lvl = 20,
         .species = SPECIES_EXEGGCUTE,
         .heldItem = ITEM_LUM_BERRY,
-        .moves = {MOVE_RAZOR_LEAF, MOVE_CONFUSION, MOVE_STUN_SPORE, MOVE_EXPLOSION},
+        .moves = {MOVE_GIGA_DRAIN, MOVE_CONFUSION, MOVE_STUN_SPORE, MOVE_EXPLOSION},
     },
 
 };
@@ -4344,30 +4377,30 @@ static const struct TrainerMonItemCustomMoves sParty_TeamRocketGrunt2[] = {
     {
         .iv = 255,
         .lvl = 20,
-        .species = SPECIES_MEOWTH,
-        .heldItem = ITEM_CHOICE_BAND,
-        .moves = {MOVE_PAY_DAY, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+        .species = SPECIES_SANDSLASH,
+        .heldItem = ITEM_SOFT_SAND,
+        .moves = {MOVE_DIG, MOVE_X_SCISSORS, MOVE_AERIAL_ACE, MOVE_SAND_ATTACK},
     },
     {
         .iv = 255,
         .lvl = 20,
-        .species = SPECIES_SLUGMA,
-        .heldItem = ITEM_QUICK_CLAW,
-        .moves = {MOVE_FLAME_WHEEL, MOVE_ROCK_TOMB, MOVE_ANCIENT_POWER, MOVE_RECOVER},
-    },
-    {
-        .iv = 255,
-        .lvl = 20,
-        .species = SPECIES_TRAPINCH,
-        .heldItem = ITEM_CHOICE_BAND,
-        .moves = {MOVE_EARTH_POWER, MOVE_ROCK_SLIDE, MOVE_NONE, MOVE_NONE},
-    },
-    {
-        .iv = 255,
-        .lvl = 20,
-        .species = SPECIES_EXEGGCUTE,
+        .species = SPECIES_AIPOM,
         .heldItem = ITEM_LUM_BERRY,
-        .moves = {MOVE_RAZOR_LEAF, MOVE_CONFUSION, MOVE_STUN_SPORE, MOVE_EXPLOSION},
+        .moves = {MOVE_FAKE_OUT, MOVE_STRENGTH, MOVE_SHADOW_BALL, MOVE_SAND_ATTACK},
+    },
+    {
+        .iv = 255,
+        .lvl = 20,
+        .species = SPECIES_FARFETCHD,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_AERIAL_ACE, MOVE_SLASH, MOVE_STEEL_WING, MOVE_SAND_ATTACK},
+    },
+    {
+        .iv = 255,
+        .lvl = 20,
+        .species = SPECIES_UMBREON,
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .moves = {MOVE_KNOCK_OFF, MOVE_TOXIC, MOVE_REST, MOVE_SAND_ATTACK},
     },
 
 };
@@ -4375,31 +4408,38 @@ static const struct TrainerMonItemCustomMoves sParty_TeamRocketGrunt2[] = {
 static const struct TrainerMonItemCustomMoves sParty_TeamRocketGrunt3[] = {
     {
         .iv = 255,
-        .lvl = 20,
-        .species = SPECIES_MEOWTH,
-        .heldItem = ITEM_CHOICE_BAND,
-        .moves = {MOVE_PAY_DAY, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+        .lvl = 21,
+        .species = SPECIES_ARBOK,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_SLUDGE, MOVE_DIG, MOVE_GLARE, MOVE_BITE},
     },
     {
         .iv = 255,
-        .lvl = 20,
-        .species = SPECIES_SLUGMA,
-        .heldItem = ITEM_QUICK_CLAW,
-        .moves = {MOVE_FLAME_WHEEL, MOVE_ROCK_TOMB, MOVE_ANCIENT_POWER, MOVE_RECOVER},
+        .lvl = 21,
+        .species = SPECIES_GOLBAT,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_SLUDGE, MOVE_AERIAL_ACE, MOVE_X_SCISSORS, MOVE_PROTECT},
     },
     {
         .iv = 255,
-        .lvl = 20,
-        .species = SPECIES_TRAPINCH,
-        .heldItem = ITEM_CHOICE_BAND,
-        .moves = {MOVE_EARTH_POWER, MOVE_ROCK_SLIDE, MOVE_NONE, MOVE_NONE},
+        .lvl = 21,
+        .species = SPECIES_DROWZEE,
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .moves = {MOVE_EXTRASENSORY, MOVE_THUNDER_PUNCH, MOVE_HYPNOSIS, MOVE_ICE_PUNCH},
     },
     {
         .iv = 255,
-        .lvl = 20,
-        .species = SPECIES_EXEGGCUTE,
+        .lvl = 21,
+        .species = SPECIES_SNEASEL,
         .heldItem = ITEM_LUM_BERRY,
-        .moves = {MOVE_RAZOR_LEAF, MOVE_CONFUSION, MOVE_STUN_SPORE, MOVE_EXPLOSION},
+        .moves = {MOVE_AURORA_BEAM, MOVE_BITE, MOVE_THIEF, MOVE_LOW_KICK},
+    },
+    {
+        .iv = 255,
+        .lvl = 21,
+        .species = SPECIES_DIGLETT,
+        .heldItem = ITEM_CHOICE_BAND,
+        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_AERIAL_ACE, MOVE_HIDDEN_POWER_BUG},
     },
 
 };
