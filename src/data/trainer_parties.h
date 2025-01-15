@@ -4308,48 +4308,100 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderGiovanni[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt[] = {
+static const struct TrainerMonItemCustomMoves sParty_TeamRocketGrunt[] = {
     {
-        .iv = 0,
-        .lvl = 13,
-        .species = SPECIES_RATTATA,
+        .iv = 255,
+        .lvl = 20,
+        .species = SPECIES_MEOWTH,
+        .heldItem = ITEM_CHOICE_BAND,
+        .moves = {MOVE_PAY_DAY, MOVE_NONE, MOVE_NONE, MOVE_NONE},
     },
     {
-        .iv = 0,
-        .lvl = 13,
-        .species = SPECIES_ZUBAT,
+        .iv = 255,
+        .lvl = 20,
+        .species = SPECIES_SLUGMA,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_FLAME_WHEEL, MOVE_ROCK_TOMB, MOVE_ANCIENT_POWER, MOVE_RECOVER},
     },
+    {
+        .iv = 255,
+        .lvl = 20,
+        .species = SPECIES_TRAPINCH,
+        .heldItem = ITEM_CHOICE_BAND,
+        .moves = {MOVE_EARTH_POWER, MOVE_ROCK_SLIDE, MOVE_NONE, MOVE_NONE},
+    },
+    {
+        .iv = 255,
+        .lvl = 20,
+        .species = SPECIES_EXEGGCUTE,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_RAZOR_LEAF, MOVE_CONFUSION, MOVE_STUN_SPORE, MOVE_EXPLOSION},
+    },
+
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt2[] = {
+static const struct TrainerMonItemCustomMoves sParty_TeamRocketGrunt2[] = {
     {
-        .iv = 0,
-        .lvl = 11,
-        .species = SPECIES_SANDSHREW,
+        .iv = 255,
+        .lvl = 20,
+        .species = SPECIES_MEOWTH,
+        .heldItem = ITEM_CHOICE_BAND,
+        .moves = {MOVE_PAY_DAY, MOVE_NONE, MOVE_NONE, MOVE_NONE},
     },
     {
-        .iv = 0,
-        .lvl = 11,
-        .species = SPECIES_RATTATA,
+        .iv = 255,
+        .lvl = 20,
+        .species = SPECIES_SLUGMA,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_FLAME_WHEEL, MOVE_ROCK_TOMB, MOVE_ANCIENT_POWER, MOVE_RECOVER},
     },
     {
-        .iv = 0,
-        .lvl = 11,
-        .species = SPECIES_ZUBAT,
+        .iv = 255,
+        .lvl = 20,
+        .species = SPECIES_TRAPINCH,
+        .heldItem = ITEM_CHOICE_BAND,
+        .moves = {MOVE_EARTH_POWER, MOVE_ROCK_SLIDE, MOVE_NONE, MOVE_NONE},
     },
+    {
+        .iv = 255,
+        .lvl = 20,
+        .species = SPECIES_EXEGGCUTE,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_RAZOR_LEAF, MOVE_CONFUSION, MOVE_STUN_SPORE, MOVE_EXPLOSION},
+    },
+
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt3[] = {
+static const struct TrainerMonItemCustomMoves sParty_TeamRocketGrunt3[] = {
     {
-        .iv = 0,
-        .lvl = 11,
-        .species = SPECIES_ZUBAT,
+        .iv = 255,
+        .lvl = 20,
+        .species = SPECIES_MEOWTH,
+        .heldItem = ITEM_CHOICE_BAND,
+        .moves = {MOVE_PAY_DAY, MOVE_NONE, MOVE_NONE, MOVE_NONE},
     },
     {
-        .iv = 0,
-        .lvl = 11,
-        .species = SPECIES_EKANS,
+        .iv = 255,
+        .lvl = 20,
+        .species = SPECIES_SLUGMA,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_FLAME_WHEEL, MOVE_ROCK_TOMB, MOVE_ANCIENT_POWER, MOVE_RECOVER},
     },
+    {
+        .iv = 255,
+        .lvl = 20,
+        .species = SPECIES_TRAPINCH,
+        .heldItem = ITEM_CHOICE_BAND,
+        .moves = {MOVE_EARTH_POWER, MOVE_ROCK_SLIDE, MOVE_NONE, MOVE_NONE},
+    },
+    {
+        .iv = 255,
+        .lvl = 20,
+        .species = SPECIES_EXEGGCUTE,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_RAZOR_LEAF, MOVE_CONFUSION, MOVE_STUN_SPORE, MOVE_EXPLOSION},
+    },
+
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt4[] = {
