@@ -485,6 +485,7 @@ PalletTown_ProfessorOaksLab_EventScript_EndRivalBattle::
 	fadedefaultbgm
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 4
 	setflag FLAG_BEAT_RIVAL_IN_OAKS_LAB
+	callnative GlobalNuzlockeSet
 	releaseall
 	end
 
@@ -664,7 +665,6 @@ PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene::
 	setflag FLAG_SYS_POKEDEX_GET
 	special SetUnlockedPokedexFlags
 	special EnableNationalPokedex
-	callnative GlobalNuzlockeSet
 	setvar VAR_MAP_SCENE_POKEMON_CENTER_TEALA, 1
 	msgbox PalletTown_ProfessorOaksLab_Text_OakCatchMonsForDataTakeThese
 	giveitem_msg PalletTown_ProfessorOaksLab_Text_ReceivedFivePokeBalls, ITEM_POKE_BALL, 5
