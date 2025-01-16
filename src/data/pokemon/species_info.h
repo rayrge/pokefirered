@@ -5345,7 +5345,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_AZUMARILL] =
     {
         .baseHP = 100,
-        .baseAttack = 70,
+        .baseAttack = 60,
         .baseDefense = 80,
         .baseSpeed = 50,
         .baseSpAttack = 85,

@@ -699,7 +699,7 @@ static const struct TrainerMonItemCustomMoves sParty_PicnickerDiana[] = {
 static const struct TrainerMonItemCustomMoves sParty_LeaderMisty[] = {
     {
         .iv = 255,
-        .lvl = 23,
+        .lvl = 21,
         .species = SPECIES_AZUMARILL,
         .heldItem = ITEM_SILK_SCARF,
         .moves = {MOVE_HIDDEN_POWER_WATER, MOVE_SECRET_POWER, MOVE_CHARM, MOVE_BRICK_BREAK},
