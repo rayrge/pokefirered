@@ -6667,6 +6667,10 @@ void DeletePartyMon(u8 position)
 
 void DeleteFaintedPartyMons(void)
 {
+    
+}
+
+void DeleteFaintedPartyMonsFake(void) {
     int i;
     struct Pokemon *pokemon;
     u32 monItem;

@@ -270,7 +270,7 @@ static bool32 IsSpeciesOnMap(const struct WildPokemonHeader * data, s32 species)
 #ifdef BUGFIX
     if (IsSpeciesInEncounterTable(data->fishingMonsInfo, species, FISH_WILD_COUNT))
 #else
-    if (IsSpeciesInEncounterTable(data->fishingMonsInfo, species, LAND_WILD_COUNT))
+    if (IsSpeciesInEncounterTable(data->fishingMonsInfo, species, FISH_WILD_COUNT))
 #endif
         return TRUE;
     if (IsSpeciesInEncounterTable(data->rockSmashMonsInfo, species, ROCK_WILD_COUNT))
