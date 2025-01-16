@@ -723,7 +723,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderMisty[] = {
         .lvl = 23,
         .species = SPECIES_KINGLER,
         .heldItem = ITEM_LUM_BERRY,
-        .moves = {MOVE_BRICK_BREAK, MOVE_X_SCISSORS, MOVE_WATER_PULSE, MOVE_ROCK_TOMB}
+        .moves = {MOVE_BRICK_BREAK, MOVE_X_SCISSORS, MOVE_WATER_PULSE, MOVE_MUD_SHOT}
     },
     {
         .iv = 255,
