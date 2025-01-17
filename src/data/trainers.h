@@ -920,7 +920,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_YoungsterTimmy),
+        .party = ITEM_CUSTOM_MOVES(sParty_YoungsterTimmy),
     },
     [TRAINER_YOUNGSTER_JOEY] = {
         .trainerClass = TRAINER_CLASS_YOUNGSTER,
@@ -1100,7 +1100,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_BugCatcherCale),
+        .party = ITEM_CUSTOM_MOVES(sParty_BugCatcherCale),
     },
     [TRAINER_BUG_CATCHER_KEIGO] = {
         .trainerClass = TRAINER_CLASS_BUG_CATCHER,
@@ -1220,7 +1220,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_LassReli),
+        .party = ITEM_CUSTOM_MOVES(sParty_LassReli),
     },
     [TRAINER_LASS_ALI] = {
         .trainerClass = TRAINER_CLASS_LASS,
@@ -1230,7 +1230,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_LassAli),
+        .party = ITEM_CUSTOM_MOVES(sParty_LassAli),
     },
     [TRAINER_LASS_2] = {
         .trainerClass = TRAINER_CLASS_LASS,
@@ -1700,7 +1700,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_SuperNerdMiguel),
+        .party = ITEM_CUSTOM_MOVES(sParty_SuperNerdMiguel),
     },
     [TRAINER_SUPER_NERD_AIDAN] = {
         .trainerClass = TRAINER_CLASS_SUPER_NERD,
