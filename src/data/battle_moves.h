@@ -1836,7 +1836,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_LEECH_LIFE] =
     {
         .effect = EFFECT_ABSORB,
-        .power = 40,
+        .power = 80,
         .type = TYPE_BUG,
         .accuracy = 100,
         .pp = 24,

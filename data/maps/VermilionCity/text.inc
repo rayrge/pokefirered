@@ -31,7 +31,7 @@ VermilionCity_Text_SSAnneVisitsOnceAYear::
 
 VermilionCity_Text_CitySign::
     .string "VERMILION CITY\n"
-    .string "The Port of Exquisite Sunsets$"
+    .string "The Port of Exquisite Chairs$"
 
 VermilionCity_Text_SnorlaxBlockingRoute12::
     .string "NOTICE!\p"
@@ -51,7 +51,8 @@ VermilionCity_Text_GymSign::
     .string "The Lightning American!$"
 
 VermilionCity_Text_VermilionHarbor::
-    .string "VERMILION HARBOR$"
+    .string "Yes, I stole this joke.\n"
+    .string "No, I do not care.$"
 
 VermilionCity_Text_WelcomeToTheSSAnne::
     .string "Welcome to the S.S. ANNE!$"

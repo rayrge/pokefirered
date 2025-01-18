@@ -1,23 +1,47 @@
-CeladonCity_DepartmentStore_5F_Text_ExplainStatEnhancers::
-    .string "POKéMON stat enhancers can be\n"
-    .string "bought only here.\p"
-    .string "HP UP increases the base HP of a\n"
-    .string "POKéMON.\p"
-    .string "CALCIUM raises the base SP. ATK\n"
-    .string "stat of one POKéMON.\p"
-    .string "ZINC boosts the base SP. DEF stat\n"
-    .string "of one POKéMON.\p"
-    .string "CARBOS enhances the base SPEED\n"
-    .string "stat.$"
+CeladonCity_DepartmentStore_5F_Text_TeachMonMoveForMushroom::
+    .string "I'm the POKéMON MOVE MANIAC.\p"
+    .string "I know every single move that\n"
+    .string "POKéMON learn growing up.\p"
+    .string "I'm also a mushroom maniac.\p"
+    .string "Bring me two TINYMUSHROOMS,\n"
+    .string "or one BIG MUSHROOM.\p"
+    .string "If you do that for me, I'll teach\n"
+    .string "a move to one POKéMON.$"
 
-CeladonCity_DepartmentStore_5F_Text_HereForStatEnhancers::
-    .string "I'm here for POKéMON stat\n"
-    .string "enhancers.\p"
-    .string "PROTEIN increases the base ATTACK\n"
-    .string "power.\p"
-    .string "IRON increases the base DEFENSE\n"
-    .string "stat.$"
+CeladonCity_DepartmentStore_5F_Text_WantMeToTeachMove::
+    .string "Sniff, sniff…\n"
+    .string "Hm! You smell of MUSHROOMS!\p"
+    .string "Do you want me to teach a move\n"
+    .string "to a POKéMON of yours?$"
 
-CeladonCity_DepartmentStore_5F_Text_Drugstore::
-    .string "5F: DRUGSTORE$"
+CeladonCity_DepartmentStore_5F_Text_TutorWhichMon::
+    .string "Which POKéMON needs tutoring?$"
+
+CeladonCity_DepartmentStore_5F_Text_TeachWhichMove::
+    .string "Which move should I teach?$"
+
+CeladonCity_DepartmentStore_5F_Text_NoMoveICanTeachThatMon::
+    .string "Sorry…\p"
+    .string "It doesn't appear as if I have a\n"
+    .string "move I can teach that POKéMON.$"
+
+CeladonCity_DepartmentStore_5F_Text_IllNeedMushroomOrTwo::
+    .string "Then, I'll need a MUSHROOM or two.\n"
+    .string "What are you going to give me?$"
+
+CeladonCity_DepartmentStore_5F_Text_HandedOverTwoTinyMushrooms::
+    .string "{PLAYER} handed over two\n"
+    .string "TINYMUSHROOMS in exchange.$"
+
+CeladonCity_DepartmentStore_5F_Text_HandedOverOneBigMushroom::
+    .string "{PLAYER} handed over one\n"
+    .string "BIG MUSHROOM in exchange.$"
+
+CeladonCity_DepartmentStore_5F_Text_NeedMushroomOrTwoToLearnMove::
+    .string "If your POKéMON need to learn a\n"
+    .string "move, I need a MUSHROOM or two.$"
+
+CeladonCity_DepartmentStore_5F_Text_CantTeachAnEgg::
+    .string "Hunh? There isn't a single move\n"
+    .string "that I can teach an EGG.$"
 

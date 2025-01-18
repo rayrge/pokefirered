@@ -26,13 +26,13 @@ script Route4_EventScript_Falkner {
 }
 
 text Falkner_Intro{
-    "I've been searching for a legendary\n"
-    "pilot who ruled the lands.\p"
-    "Have you heard of the legend?"
+    "These were my father's Pokemon\n"
+    "before he died in a THUNDER strike.\p"
+    "I will do his memory proud!"
 }
 
 text Falkner_Outro{
-    "Not here!"
+    "Aw, dang it!"
 }
 
 text Falkner_PostBattle{

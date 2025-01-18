@@ -1,61 +1,120 @@
+.equ CHECKED_MUSHROOMS,  FLAG_TEMP_1
+.equ HAS_BIG_MUSHROOM,   FLAG_TEMP_2
+.equ HAS_TINY_MUSHROOMS, FLAG_TEMP_3
+.equ HAS_BOTH_MUSHROOMS, FLAG_TEMP_4
+
 CeladonCity_DepartmentStore_5F_MapScripts::
 	.byte 0
 
-CeladonCity_DepartmentStore_5F_EventScript_Gentleman::
-	msgbox CeladonCity_DepartmentStore_5F_Text_ExplainStatEnhancers, MSGBOX_NPC
-	end
-
-CeladonCity_DepartmentStore_5F_EventScript_Sailor::
-	msgbox CeladonCity_DepartmentStore_5F_Text_HereForStatEnhancers, MSGBOX_NPC
-	end
-
-CeladonCity_DepartmentStore_5F_EventScript_FloorSign::
-	msgbox CeladonCity_DepartmentStore_5F_Text_Drugstore, MSGBOX_SIGN
-	end
-
-CeladonCity_DepartmentStore_5F_EventScript_ClerkXItems::
+CeladonCity_DepartmentStore_5F_EventScript_MoveManiac::
 	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
 	lock
 	faceplayer
-	message Text_MayIHelpYou
+	clearflag HAS_BIG_MUSHROOM
+	clearflag HAS_TINY_MUSHROOMS
+	clearflag HAS_BOTH_MUSHROOMS
+	goto_if_set CHECKED_MUSHROOMS, CeladonCity_DepartmentStore_5F_EventScript_CheckPlayerHasMushrooms
+	msgbox CeladonCity_DepartmentStore_5F_Text_TeachMonMoveForMushroom
+	setflag CHECKED_MUSHROOMS
+	goto CeladonCity_DepartmentStore_5F_EventScript_CheckPlayerHasMushrooms
+	end
+
+CeladonCity_DepartmentStore_5F_EventScript_CheckPlayerHasMushrooms::
+	checkitem ITEM_BIG_MUSHROOM
+	call_if_eq VAR_RESULT, TRUE, CeladonCity_DepartmentStore_5F_EventScript_SetHasBigMushroom
+	checkitem ITEM_TINY_MUSHROOM, 2
+	call_if_eq VAR_RESULT, TRUE, CeladonCity_DepartmentStore_5F_EventScript_SetHasTinyMushrooms
+	goto_if_set HAS_BIG_MUSHROOM, CeladonCity_DepartmentStore_5F_EventScript_CheckAlsoHasTinyMushrooms
+	goto_if_set HAS_TINY_MUSHROOMS, CeladonCity_DepartmentStore_5F_EventScript_CheckAlsoHasBigMushroom
+	goto CeladonCity_DepartmentStore_5F_EventScript_EndTutorMove
+	end
+
+CeladonCity_DepartmentStore_5F_EventScript_CheckAlsoHasTinyMushrooms::
+	call_if_set HAS_TINY_MUSHROOMS, CeladonCity_DepartmentStore_5F_EventScript_SetHasBothMushrooms
+	goto CeladonCity_DepartmentStore_5F_EventScript_AskTutorMon
+	end
+
+CeladonCity_DepartmentStore_5F_EventScript_CheckAlsoHasBigMushroom::
+	call_if_set HAS_BIG_MUSHROOM, CeladonCity_DepartmentStore_5F_EventScript_SetHasBothMushrooms
+	goto CeladonCity_DepartmentStore_5F_EventScript_AskTutorMon
+	end
+
+CeladonCity_DepartmentStore_5F_EventScript_AskTutorMon::
+	msgbox CeladonCity_DepartmentStore_5F_Text_WantMeToTeachMove, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CeladonCity_DepartmentStore_5F_EventScript_EndTutorMove
+	goto CeladonCity_DepartmentStore_5F_EventScript_ChooseMonToTutor
+	end
+
+CeladonCity_DepartmentStore_5F_EventScript_ChooseMonToTutor::
+	msgbox CeladonCity_DepartmentStore_5F_Text_TutorWhichMon
+	special SelectMoveTutorMon
+	waitstate
+	goto_if_ge VAR_0x8004, PARTY_SIZE, CeladonCity_DepartmentStore_5F_EventScript_EndTutorMove
+	special IsSelectedMonEgg
+	goto_if_eq VAR_RESULT, TRUE, CeladonCity_DepartmentStore_5F_EventScript_CantTutorEgg
+	goto_if_eq VAR_0x8005, 0, CeladonCity_DepartmentStore_5F_EventScript_NoMoveToTutorMon
+	goto CeladonCity_DepartmentStore_5F_EventScript_ChooseMoveToTeach
+	end
+
+CeladonCity_DepartmentStore_5F_EventScript_ChooseMoveToTeach::
+	msgbox CeladonCity_DepartmentStore_5F_Text_TeachWhichMove
+	special DisplayMoveTutorMenu
+	waitstate
+	goto_if_eq VAR_0x8004, 0, CeladonCity_DepartmentStore_5F_EventScript_ChooseMonToTutor
+	goto_if_set HAS_BOTH_MUSHROOMS, CeladonCity_DepartmentStore_5F_EventScript_ChooseMushroom
+	goto_if_set HAS_BIG_MUSHROOM, CeladonCity_DepartmentStore_5F_EventScript_GiveBigMushroom
+	goto_if_set HAS_TINY_MUSHROOMS, CeladonCity_DepartmentStore_5F_EventScript_GiveTinyMushrooms
+	end
+
+CeladonCity_DepartmentStore_5F_EventScript_GiveBigMushroom::
+	removeitem ITEM_BIG_MUSHROOM
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox CeladonCity_DepartmentStore_5F_Text_HandedOverOneBigMushroom
+	call EventScript_RestorePrevTextColor
+	goto CeladonCity_DepartmentStore_5F_EventScript_EndTutorMove
+	end
+
+CeladonCity_DepartmentStore_5F_EventScript_GiveTinyMushrooms::
+	removeitem ITEM_TINY_MUSHROOM, 2
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox CeladonCity_DepartmentStore_5F_Text_HandedOverTwoTinyMushrooms
+	call EventScript_RestorePrevTextColor
+	goto CeladonCity_DepartmentStore_5F_EventScript_EndTutorMove
+	end
+
+CeladonCity_DepartmentStore_5F_EventScript_ChooseMushroom::
+	message CeladonCity_DepartmentStore_5F_Text_IllNeedMushroomOrTwo
 	waitmessage
-	pokemart CeladonCity_DepartmentStore_5F_XItems
-	msgbox Text_PleaseComeAgain
+	multichoice 0, 0, MULTICHOICE_MUSHROOMS, TRUE
+	switch VAR_RESULT
+	case 0, CeladonCity_DepartmentStore_5F_EventScript_GiveTinyMushrooms
+	case 1, CeladonCity_DepartmentStore_5F_EventScript_GiveBigMushroom
+	end
+
+CeladonCity_DepartmentStore_5F_EventScript_NoMoveToTutorMon::
+	msgbox CeladonCity_DepartmentStore_5F_Text_NoMoveICanTeachThatMon
+	goto CeladonCity_DepartmentStore_5F_EventScript_ChooseMonToTutor
+	end
+
+CeladonCity_DepartmentStore_5F_EventScript_CantTutorEgg::
+	msgbox CeladonCity_DepartmentStore_5F_Text_CantTeachAnEgg
+	goto CeladonCity_DepartmentStore_5F_EventScript_ChooseMonToTutor
+	end
+
+CeladonCity_DepartmentStore_5F_EventScript_EndTutorMove::
+	msgbox CeladonCity_DepartmentStore_5F_Text_NeedMushroomOrTwoToLearnMove
 	release
 	end
 
-	.align 2
-CeladonCity_DepartmentStore_5F_XItems::
-	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFEND
-	.2byte ITEM_X_SPEED
-	.2byte ITEM_X_SPECIAL
-	.2byte ITEM_X_ACCURACY
-	.2byte ITEM_GUARD_SPEC
-	.2byte ITEM_DIRE_HIT
-	.2byte ITEM_NONE
-	release
-	end
+CeladonCity_DepartmentStore_5F_EventScript_SetHasBigMushroom::
+	setflag HAS_BIG_MUSHROOM
+	return
 
-CeladonCity_DepartmentStore_5F_EventScript_ClerkVitamins::
-	goto_if_questlog EventScript_ReleaseEnd
-	lock
-	faceplayer
-	message Text_MayIHelpYou
-	waitmessage
-	pokemart CeladonCity_DepartmentStore_5F_Vitamins
-	msgbox Text_PleaseComeAgain
-	release
-	end
+CeladonCity_DepartmentStore_5F_EventScript_SetHasTinyMushrooms::
+	setflag HAS_TINY_MUSHROOMS
+	return
 
-	.align 2
-CeladonCity_DepartmentStore_5F_Vitamins::
-	.2byte ITEM_HP_UP
-	.2byte ITEM_PROTEIN
-	.2byte ITEM_IRON
-	.2byte ITEM_CALCIUM
-	.2byte ITEM_ZINC
-	.2byte ITEM_CARBOS
-	.2byte ITEM_NONE
-	release
-	end
+CeladonCity_DepartmentStore_5F_EventScript_SetHasBothMushrooms::
+	setflag HAS_BOTH_MUSHROOMS
+	return

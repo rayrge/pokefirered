@@ -47,13 +47,13 @@ MtMoon_1F_Text_JovanPostBattle::
     .string "Where might they be?$"
 
 MtMoon_1F_Text_TomoIntro::
-    .string "I am not a joke reference.$"
+    .string "Huh.$"
 
 MtMoon_1F_Text_TomoDefeat::
     .string "I lost?$"
 
 MtMoon_1F_Text_TomoPostBattle::
-    .string "Huh.$"
+    .string "I will be back later.$"
 
 MtMoon_1F_Text_KentIntro::
     .string "Suspicious men are in the cave.\n"

@@ -56,16 +56,15 @@ Route6_Text_IsabellePostBattle::
     .string "What's your secret?$"
 
 Route6_Text_ElijahIntro::
-    .string "I've never seen you around.\n"
-    .string "Are you good?$"
+    .string "I found some REALLY cool bugs\n"
+    .string "around here. I'll show you!$"
 
 Route6_Text_ElijahDefeat::
-    .string "You're too good!$"
+    .string "I'm a fricking loser!$"
 
 Route6_Text_ElijahPostBattle::
-    .string "Are my POKéMON weak?\n"
-    .string "Or, am I just bad?\l"
-    .string "Which do you think?$"
+    .string "Someday I'll find some actually\n"
+    .string "strong BUG pokemon.$"
 
 Route6_Text_UndergroundPathSign::
     .string "UNDERGROUND PATH\n"

@@ -47,13 +47,13 @@ Route4_EventScript_Falkner::
 
 Falkner_Intro::
 # 28 "data/maps/Route4/scripts.pory"
-	.string "I've been searching for a legendary\n"
-	.string "pilot who ruled the lands.\p"
-	.string "Have you heard of the legend?$"
+	.string "These were my father's Pokemon\n"
+	.string "before he died in a THUNDER strike.\p"
+	.string "I will do his memory proud!$"
 
 Falkner_Outro::
 # 34 "data/maps/Route4/scripts.pory"
-	.string "Not here!$"
+	.string "Aw, dang it!$"
 
 Falkner_PostBattle::
 # 38 "data/maps/Route4/scripts.pory"
